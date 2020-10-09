@@ -1,4 +1,4 @@
-package com.jjk.todolist
+package com.itm.lolMatching
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,8 @@ import android.graphics.Paint
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
@@ -21,8 +18,8 @@ import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.jjk.todolist.databinding.ActivityMainBinding
-import com.jjk.todolist.databinding.ItemTodoBinding
+import com.itm.lolMatching.databinding.ActivityMainBinding
+import com.itm.lolMatching.databinding.ItemTodoBinding
 
 class MainActivity : AppCompatActivity() {
 
