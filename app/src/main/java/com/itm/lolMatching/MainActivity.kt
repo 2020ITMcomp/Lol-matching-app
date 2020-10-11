@@ -21,6 +21,9 @@ import com.google.firebase.ktx.Firebase
 import com.itm.lolMatching.databinding.ActivityMainBinding
 import com.itm.lolMatching.databinding.ItemTodoBinding
 
+
+const val EXTRA_MESSAGE = "com.itm.lolMatching.MESSAGE"
+
 class MainActivity : AppCompatActivity() {
 
     // 레이아웃에 있는 친구들의 이름이 Binding이 붙어서 클래스가 생기게 된다.
@@ -38,7 +41,6 @@ class MainActivity : AppCompatActivity() {
 
         if(FirebaseAuth.getInstance().currentUser == null){ // 로그인이 안됬을 때
             login()
-
         }
 
 
@@ -55,6 +57,15 @@ class MainActivity : AppCompatActivity() {
                 }
             )
 
+        }
+
+        binding.searchSummoner.setOnClickListener {
+            // TODO 다음 엑티비티를 만들고 넘어가는 식으로 진행
+            val bundle:String = "Move to the next page"
+            val intent = Intent(this, SearchActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE, bundle) // 뒤에 넣는 것은 Bundle로써, 보내고 싶은 것을 보낸다.
+            }
+            startActivity(intent)
         }
 
         binding.addButton.setOnClickListener{
