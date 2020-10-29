@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lol mathcing app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Wating_text">Just Waiting</string>
 </resources>
