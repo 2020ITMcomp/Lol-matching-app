@@ -28,6 +28,10 @@ android {
         enabled = true
     }
 
+    dataBinding{
+        enabled = true
+    }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -35,7 +39,6 @@ android {
 
 dependencies {
     def nav_version = "2.3.1"
-
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.1.0'
@@ -52,5 +55,5 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version" // Navigation
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version" // Navigation
     implementation 'androidx.legacy:legacy-support-v4:1.0.0' // DrawerLayout
-    implementation 'com.google.android.material:material:1.0.0' // NavigationView
+    implementation 'com.google.android.material:material:1.0.0' // NavigationView t
 }

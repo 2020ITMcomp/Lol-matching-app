@@ -3,15 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.WaitingRoom">
+    tools:context=".UI.chatRoom">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/waitingText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/Wating_text"
-        android:textSize="50dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

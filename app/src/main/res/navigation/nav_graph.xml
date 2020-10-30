@@ -3,16 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/searchActivity">
+    app:startDestination="@id/overview">
 
-    <activity
-        android:id="@+id/searchActivity"
-        android:name="com.itm.lolMatching.SearchActivity"
-        android:label="activity_search"
-        tools:layout="@layout/activity_search" />
     <fragment
         android:id="@+id/waitingRoom"
         android:name="com.itm.lolMatching.UI.WaitingRoom"
         android:label="fragment_waiting_room"
-        tools:layout="@layout/fragment_waiting_room" />
+        tools:layout="@layout/fragment_waiting_room" >
+        <action
+            android:id="@+id/action_waitingRoom_to_chatRoom"
+            app:destination="@id/chatRoom" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatRoom"
+        android:name="com.itm.lolMatching.UI.chatRoom"
+        android:label="fragment_chat_room"
+        tools:layout="@layout/fragment_chat_room" />
+
+    <fragment
+        android:id="@+id/searchSummorer"
+        android:name="com.itm.lolMatching.UI.searchSummorer"
+        android:label="fragment_search_summorer"
+        tools:layout="@layout/fragment_search_summorer" />
+
+    <fragment
+        android:id="@+id/overview"
+        android:name="com.itm.lolMatching.UI.overview"
+        android:label="fragment_overview"
+        tools:layout="@layout/fragment_overview" >
+        <action
+            android:id="@+id/action_overview_to_searchSummorer"
+            app:destination="@id/searchSummorer" />
+        <action
+            android:id="@+id/action_overview_to_waitingRoom"
+            app:destination="@id/waitingRoom" />
+    </fragment>
+
 </navigation>
