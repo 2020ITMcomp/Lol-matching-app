@@ -16,7 +16,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <!--            menu의 test 부분은 수정이 필요함.-->
+
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/nav_graph"/>
+        </LinearLayout>
 
 
             <com.google.android.material.navigation.NavigationView
@@ -25,25 +33,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 app:headerLayout="@layout/nav_header"
-                app:menu="@menu/test"
-                />
+                app:menu="@menu/navdrawer_menu" />
 
 
-            <fragment
-                android:id="@+id/nav_host_fragment"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
 
-                app:defaultNavHost="true"
-                app:navGraph="@navigation/nav_graph"/>
-
-
-        </LinearLayout>
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

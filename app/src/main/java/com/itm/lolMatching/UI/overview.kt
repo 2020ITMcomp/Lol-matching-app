@@ -1,14 +1,13 @@
 package com.itm.lolMatching.UI
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.itm.lolMatching.R
 import com.itm.lolMatching.databinding.FragmentOverviewBinding
 
@@ -40,6 +39,18 @@ class overview : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_overview_to_waitingRoom)
         }
 
+//        setHasOptionsMenu(true)
+
         return view
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        super.onCreateOptionsMenu(menu, inflater)
+//        inflater.inflate(R.menu.navdrawer_menu, menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
+//    }
+
 }
