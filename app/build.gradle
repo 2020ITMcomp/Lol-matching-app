@@ -8,6 +8,10 @@ apply plugin: 'com.google.gms.google-services'
 
 apply plugin: "androidx.navigation.safeargs"
 
+androidExtensions{
+    experimental = true
+}
+
 
 android {
     compileSdkVersion 28
@@ -30,6 +34,11 @@ android {
     viewBinding{
         enabled = true
     }
+
+    dataBinding{
+        enabled = true
+    }
+
 }
 
 dependencies {
@@ -58,4 +67,9 @@ dependencies {
 
     // Firebase FireStore
     implementation 'com.google.firebase:firebase-firestore:21.2.1'
+
+    // Messaging Adapter
+    implementation "com.xwray:groupie:2.7.0"
+    implementation "com.xwray:groupie-databinding:2.7.0"
+    implementation "com.xwray:groupie-kotlin-android-extensions:2.7.0"
 }

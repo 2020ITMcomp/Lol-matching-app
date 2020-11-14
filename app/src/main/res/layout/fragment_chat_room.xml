@@ -10,11 +10,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatView"
                 android:layout_width="match_parent"
                 android:layout_height="600dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginTop="32dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toTopOf="@+id/messageText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.633"
                 tools:layout_editor_absoluteX="0dp" />
 
         <EditText
