@@ -10,6 +10,7 @@ import com.xwray.groupie.databinding.BindableItem
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.ItemMessageReceivedBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.ItemMessageSentBinding
+import java.text.SimpleDateFormat
 
 class SendMessageItem(private val message: Message) : BindableItem<ItemMessageSentBinding>() {
     override fun getLayout(): Int {
@@ -18,7 +19,7 @@ class SendMessageItem(private val message: Message) : BindableItem<ItemMessageSe
 
     override fun bind(viewBinding: ItemMessageSentBinding, position: Int) {
         viewBinding.textMessageBody.text = message.text_message_body
-        viewBinding.textMessageTime.text = message.timeStamp.toString()
+        viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
     }
 }
 
@@ -30,7 +31,7 @@ class ReceiveMessageItem(private val message: Message) : BindableItem<ItemMessag
     override fun bind(viewBinding: ItemMessageReceivedBinding, position: Int) {
         viewBinding.textMessageBody.text = message.text_message_body
         viewBinding.textMessageName.text = message.text_message_name
-        viewBinding.textMessageTime.text = message.timeStamp.toString()
+        viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
 
     }
 }

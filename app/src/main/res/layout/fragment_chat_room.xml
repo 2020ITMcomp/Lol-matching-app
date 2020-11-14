@@ -17,6 +17,7 @@
                 android:layout_marginTop="32dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:stackFromEnd="true"
                 app:layout_constraintBottom_toTopOf="@+id/messageText"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.633"

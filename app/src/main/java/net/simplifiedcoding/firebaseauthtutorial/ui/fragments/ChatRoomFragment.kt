@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
@@ -25,6 +26,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import net.simplifiedcoding.firebaseauthtutorial.adapter.ReceiveMessageItem
+import net.simplifiedcoding.firebaseauthtutorial.utils.snapshotToMessage
+import java.text.SimpleDateFormat
 
 
 class ChatRoomFragment : Fragment() {
@@ -34,6 +38,7 @@ class ChatRoomFragment : Fragment() {
     private lateinit var recyclerView : RecyclerView
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var uid : String
+    private lateinit var roomMessageRef : CollectionReference
     private val messageAdapter = GroupAdapter<GroupieViewHolder>()
 
     override fun onCreateView(
@@ -44,35 +49,20 @@ class ChatRoomFragment : Fragment() {
         Log.d(TAG, "Successfully entering")
         binding = FragmentChatRoomBinding.inflate(inflater, container, false)
         db = FirebaseFirestore.getInstance()
-
         recyclerView = binding.chatView
         recyclerView.adapter = messageAdapter
-        populateData()
 
-
-        // 생성되어야지만 이 fragment로 넘어오므로, 무조건 roomId가 존재한다.
         val roomId = arguments!!.getString("roomId")
         val mUser = FirebaseAuth.getInstance().currentUser
         uid = mUser!!.uid
+        roomMessageRef = getRoomMessageRef(roomId)
 
-
-        val roomMessageRef = getRoomMessageRef(roomId)
-
-        roomMessageRef.get()
-            .addOnSuccessListener {
-                Log.d(Companion.TAG, "Messages metadata : ${it.metadata}")
-            }.addOnFailureListener { e ->
-                Log.w(Companion.TAG, "Error adding document", e)
-            }
-
-//        roomMessageRef.add()
-
-
+        populateData()
 
         binding.sendButton.setOnClickListener {
 
             val message = Message(uid = uid, text_message_body = binding.messageText.text.toString(),
-                text_message_name = "TEMP", timeStamp = System.currentTimeMillis())
+                text_message_name = "TEMP", timeStamp = System.currentTimeMillis() + 32_400_000) // 시차 9시간 적용
 
             roomMessageRef.add(message)
                 .addOnSuccessListener {
@@ -82,14 +72,9 @@ class ChatRoomFragment : Fragment() {
                 }
 
             messageAdapter.add(SendMessageItem(message))
-            // After sending message
             binding.messageText.text.clear()
             receiveAutoResponse()
         }
-
-
-
-
 
         return binding.root
     }
@@ -107,12 +92,25 @@ class ChatRoomFragment : Fragment() {
     }
 
     private fun populateData() {
-        val data = listOf<Message>()
-        data.forEach {
-            if(it.uid == uid){ // 직접 보낸 것이라면
-//                messageAdapter.add()
+
+        val messages = roomMessageRef.get()
+            .addOnSuccessListener { messages ->
+                for(message in messages){
+
+                    // TODO : 일단 논리는 제대로 작성해놨는데, 확인을 제대로 못해서 오류가 날 확률이 높음.
+                    val messageUid : String = message.getString("uid")!!
+
+                    if(uid.equals(messageUid)){
+                        messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
+                    }else{
+                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message)))
+                    }
+                }
+            }.addOnFailureListener { e ->
+                Log.w(Companion.TAG, "Error adding document", e)
             }
-        }
+
+
     }
 
     companion object {
