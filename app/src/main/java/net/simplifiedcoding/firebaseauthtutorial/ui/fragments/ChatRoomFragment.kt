@@ -36,7 +36,6 @@ class ChatRoomFragment : Fragment() {
     private lateinit var binding : FragmentChatRoomBinding
     private lateinit var db : FirebaseFirestore
     private lateinit var recyclerView : RecyclerView
-    private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var uid : String
     private lateinit var roomMessageRef : CollectionReference
     private val messageAdapter = GroupAdapter<GroupieViewHolder>()

@@ -12,6 +12,10 @@ fun getRoomMessageRef(roomId : String): CollectionReference {
     return db.collection("rooms").document(roomId).collection("messages")
 }
 
+fun getRoomListRef(uid : String): CollectionReference {
+    return db.collection("users").document(uid).collection("enteredRoom")
+}
+
 fun snapshotToMessage(snapshot: QueryDocumentSnapshot) : Message{
     return Message(
         uid = snapshot.getString("uid")!!,

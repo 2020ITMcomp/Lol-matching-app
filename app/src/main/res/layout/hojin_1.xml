@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right" >
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+
+<!--        <ImageView-->
+<!--                android:id="@+id/imageView1"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="5dp"-->
+<!--                android:layout_marginTop="2dp"-->
+<!--                android:src="@drawable/Ekko" -->
+<!--                />-->
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp" >
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                <TableRow
+                        android:id="@+id/tablewin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                    <TextView
+                            android:id="@+id/win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="승리" />
+
+                </TableRow>
+
+                <TableRow
+                        android:id="@+id/tabletype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp" >
+
+                    <TextView
+                            android:id="@+id/type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="솔랭" />
+                </TableRow>
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+
+                <TableRow
+                        android:id="@+id/tableaverage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" >
+
+
+                    <TextView
+                            android:id="@+id/KDAaverage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="2.64" />
+
+                </TableRow>
+
+
+                <TableRow
+                        android:id="@+id/tableKDA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp" >
+
+
+                    <TextView
+                            android:id="@+id/KDA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18/11/11" />
+
+                </TableRow>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+
+                <TableRow
+                        android:id="@+id/tablegold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" >
+
+
+                    <TextView
+                            android:id="@+id/gold"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="14677골드" />
+
+                </TableRow>
+
+
+                <TableRow
+                        android:id="@+id/tablecs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp" >
+
+
+                    <TextView
+                            android:id="@+id/cs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CS20개" />
+
+                </TableRow>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+
+                <TableRow
+                        android:id="@+id/tabletime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" >
+
+
+                    <TextView
+                            android:id="@+id/timeaverage"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="27분7초" />
+
+                </TableRow>
+
+
+                <TableRow
+                        android:id="@+id/tablematch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp" >
+
+
+                    <TextView
+                            android:id="@+id/matchaverage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GOLD3" />
+
+                </TableRow>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</TableLayout>

@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    <TextView
+            android:id="@+id/NICKNAME"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="5dp"
+            android:text="NICKNAME" />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        <ImageView
+                android:id="@+id/imageViewGOLD"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/iron" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:layout_marginLeft="30dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+            <TableRow
+                    android:id="@+id/tableaverage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+
+                <TextView
+                        android:id="@+id/winrateaverage"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="승률 52%" />
+
+            </TableRow>
+
+
+            <TableRow
+                    android:id="@+id/tablechampion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
+
+
+                <TextView
+                        android:id="@+id/champion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선호챔피언" />
+
+            </TableRow>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="내 전적"
+            android:textSize="14dp" />
+
+    <Button
+            android:id="@+id/button1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="빠른 매칭"
+            android:textSize="14dp" />
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="선택 매칭"
+            android:textSize="14dp" />
+
+</LinearLayout>
