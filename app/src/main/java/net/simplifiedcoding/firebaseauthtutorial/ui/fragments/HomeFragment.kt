@@ -45,6 +45,9 @@ class HomeFragment : Fragment() {
         binding.searchRoomButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting)
         }
+        binding.gameHistoryButton.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_gameHistory)
+        }
 
 
 

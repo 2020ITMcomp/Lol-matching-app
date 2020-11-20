@@ -15,6 +15,9 @@
         <action
                 android:id="@+id/action_homeFragment_to_searchWaiting"
                 app:destination="@id/searchWaiting" />
+        <action
+                android:id="@+id/action_homeFragment_to_gameHistory"
+                app:destination="@id/gameHistory" />
     </fragment>
 
     <fragment android:id="@+id/profileFragment"
@@ -58,4 +61,9 @@
             android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.SearchWaiting"
             android:label="fragment_search_waiting"
             tools:layout="@layout/fragment_search_waiting" />
+    <fragment
+            android:id="@+id/gameHistory"
+            android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.GameHistory"
+            android:label="fragment_game_history"
+            tools:layout="@layout/fragment_game_history" />
 </navigation>

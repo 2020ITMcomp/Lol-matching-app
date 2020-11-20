@@ -18,6 +18,7 @@ import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_profile.*
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.utils.toast
+import net.simplifiedcoding.firebaseauthtutorial.utils.userNicknameUpdate
 import java.io.ByteArrayOutputStream
 
 
@@ -83,6 +84,8 @@ class ProfileFragment : Fragment() {
                 .build()
 
             progressbar.visibility = View.VISIBLE
+
+            userNicknameUpdate(currentUser!!.uid, name)
 
             currentUser?.updateProfile(updates)
                 ?.addOnCompleteListener { task ->
