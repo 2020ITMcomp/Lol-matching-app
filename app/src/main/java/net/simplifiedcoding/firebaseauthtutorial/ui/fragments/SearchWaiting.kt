@@ -1,6 +1,7 @@
 package net.simplifiedcoding.firebaseauthtutorial.ui.fragments
 
 import android.annotation.SuppressLint
+import android.app.ActionBar
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -28,7 +29,7 @@ class SearchWaiting : Fragment() {
 
     private lateinit var db : FirebaseFirestore
     private lateinit var mUser : FirebaseUser
-
+    private lateinit var actionbar : ActionBar
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,6 +38,8 @@ class SearchWaiting : Fragment() {
         val v = inflater.inflate(R.layout.fragment_search_waiting,container,false)
         val image:ImageView = v.findViewById(R.id.waiting)
         Glide.with(this).asGif().load(R.raw.image).into(image)
+        actionbar?.hide()
+
         db = FirebaseFirestore.getInstance()
         mUser = FirebaseAuth.getInstance().currentUser!!
 

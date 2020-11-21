@@ -31,6 +31,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array lane
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1664,6 +1665,7 @@ id layoutUpdateEmail
 id layoutUpdatePassword
 id layoutVerification
 id left
+id level
 id light
 id line1
 id line3
@@ -1684,6 +1686,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id nav_controller_view_tag
 id nav_graph
 id nav_view
@@ -1706,6 +1709,7 @@ id percent
 id pin
 id preferenceDivider
 id profileFragment
+id profileicon
 id progress_circular
 id progress_horizontal
 id progressbar
@@ -1911,6 +1915,7 @@ layout design_text_input_password_icon
 layout fastscroll__default_bubble
 layout fragment_chat_room
 layout fragment_game_history
+layout fragment_history
 layout fragment_home
 layout fragment_profile
 layout fragment_room_history

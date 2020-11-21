@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Seung kyu Hong\\Desktop\\Lol-matching-app-main\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
+            "outputFile": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-bn\\values-bn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Seung kyu Hong\\.gradle\\caches\\transforms-2\\files-2.1\\d36b64796fd9c91a304cf064ab6c5fe5\\jetified-play-services-basement-17.1.0\\res\\values-bn\\values.xml",

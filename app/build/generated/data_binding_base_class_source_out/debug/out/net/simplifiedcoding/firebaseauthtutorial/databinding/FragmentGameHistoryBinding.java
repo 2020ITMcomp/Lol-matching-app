@@ -5,19 +5,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 import net.simplifiedcoding.firebaseauthtutorial.R;
 
 public final class FragmentGameHistoryBinding implements ViewBinding {
   @NonNull
   private final FrameLayout rootView;
 
-  private FragmentGameHistoryBinding(@NonNull FrameLayout rootView) {
+  @NonNull
+  public final TextView level;
+
+  @NonNull
+  public final TextView name;
+
+  @NonNull
+  public final ImageView profileicon;
+
+  private FragmentGameHistoryBinding(@NonNull FrameLayout rootView, @NonNull TextView level,
+      @NonNull TextView name, @NonNull ImageView profileicon) {
     this.rootView = rootView;
+    this.level = level;
+    this.name = name;
+    this.profileicon = profileicon;
   }
 
   @Override
@@ -43,9 +59,27 @@ public final class FragmentGameHistoryBinding implements ViewBinding {
 
   @NonNull
   public static FragmentGameHistoryBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    String missingId;
+    missingId: {
+      TextView level = rootView.findViewById(R.id.level);
+      if (level == null) {
+        missingId = "level";
+        break missingId;
+      }
+      TextView name = rootView.findViewById(R.id.name);
+      if (name == null) {
+        missingId = "name";
+        break missingId;
+      }
+      ImageView profileicon = rootView.findViewById(R.id.profileicon);
+      if (profileicon == null) {
+        missingId = "profileicon";
+        break missingId;
+      }
+      return new FragmentGameHistoryBinding((FrameLayout) rootView, level, name, profileicon);
     }
-    return new FragmentGameHistoryBinding((FrameLayout) rootView);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
