@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.GameHistory">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginBottom="500dp"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:id="@+id/profileicon"
+                android:layout_width="78dp"
+                android:layout_height="125dp"
+                android:layout_weight='1'
+                android:background="@drawable/image" />
+
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight='2'
+                    android:gravity="center_vertical"
+                    android:text="summoner"
+                    android:textSize="24sp" />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="level or 승률"
+                    android:layout_weight="1"
+                    android:id="@+id/level"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text='최근경기'
+                android:layout_marginTop="125dp"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                />
+    </LinearLayout>
+
+    <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"/>
+
+    <!-- TODO: Update blank fragment layout -->
+
+</FrameLayout>

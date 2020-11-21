@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.HomeFragment"
+              android:label="Home" tools:layout="@layout/fragment_home">
+        <action
+                android:id="@+id/action_homeFragment_to_chatRoomFragment"
+                app:destination="@id/chatRoomFragment" />
+        <action
+                android:id="@+id/action_homeFragment_to_roomHistory"
+                app:destination="@id/roomHistory" />
+        <action
+                android:id="@+id/action_homeFragment_to_searchWaiting"
+                app:destination="@id/searchWaiting" />
+    </fragment>
+
+    <fragment android:id="@+id/profileFragment"
+              android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.ProfileFragment" android:label="Profile"
+              tools:layout="@layout/fragment_profile">
+        <action android:id="@+id/actionUpdateEmail"
+                app:destination="@id/updateEmailFragment"/>
+        <action android:id="@+id/actionUpdatePassword"
+                app:destination="@id/updatePasswordFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/updateEmailFragment"
+              android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.UpdateEmailFragment"
+              android:label="Update Email" tools:layout="@layout/fragment_update_email">
+        <action android:id="@+id/actionEmailUpdated" app:destination="@id/profileFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/updatePasswordFragment"
+              android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.UpdatePasswordFragment"
+              android:label="Update Password" tools:layout="@layout/fragment_update_password">
+        <action android:id="@+id/actionPasswordUpdated"
+                app:destination="@id/profileFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/chatRoomFragment"
+            android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.ChatRoomFragment"
+            android:label="fragment_chat_room"
+            tools:layout="@layout/fragment_chat_room" />
+    <fragment
+            android:id="@+id/roomHistory"
+            android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.RoomHistory"
+            android:label="fragment_room_history"
+            tools:layout="@layout/fragment_room_history" >
+        <action
+                android:id="@+id/action_roomHistory_to_chatRoomFragment"
+                app:destination="@id/chatRoomFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/searchWaiting"
+            android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.SearchWaiting"
+            android:label="fragment_search_waiting"
+            tools:layout="@layout/fragment_search_waiting" />
+</navigation>

@@ -1,0 +1,512 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+MERGED from [androidx.databinding:databinding-adapters:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76533580e236e451d73b47503899251c\databinding-adapters-3.6.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:databinding-runtime:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a49c5ef996bf3c024c66807f41de5e19\databinding-runtime-3.6.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.databinding:viewbinding:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8139345a24c38f53d9d72e5976f77a97\jetified-viewbinding-3.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d455c38cd3998a34e4946345a0137d39\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.xwray:groupie-kotlin-android-extensions:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\20c96b68fa25b58b5ca367317e87d3f8\jetified-groupie-kotlin-android-extensions-2.7.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:2:1-17:12
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0e820a7b427206e4834416a263566d7e\jetified-fastscroll-0.2.5\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\12d5a5b3f1042d238be2a50d34f90bbe\navigation-ui-ktx-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea62f9d1a1799e32d9ea85eec2f5887f\navigation-ui-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\04df544b3cf832f53f559e9b00bc9057\material-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\407a2836b8ae1616e4a7552af73bb631\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.0.2] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\2c223e944795b93796b1a247dd0f47fc\jetified-core-ktx-1.0.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a3ca69d6aeaeb5ffd78e4b8ae906c2e4\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:17:1-91:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3992e1781d2b333ccb804ff98d11296d\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:15:1-39:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6bce9ecfc586a01cf7a7850ece828605\navigation-fragment-ktx-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f030f4919d8ac4899639544b419759c0\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:2:1-26:12
+MERGED from [com.xwray:groupie:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1cc2ec7e30d975b0883b1a03607575c8\jetified-groupie-2.7.0\AndroidManifest.xml:2:1-14:12
+MERGED from [com.xwray:groupie-databinding:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5d8527394b4119e64c4add57c55b932a\jetified-groupie-databinding-2.7.0\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\bc3e07ddd1635867cf0e6e7f4cead51f\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\14c6b0794b51cc16b3063609de227548\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\86b23a8d8b1736b2ba955458c6c060cc\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4a61e31f7abaaeef07c3cf56f57bf2ef\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3454815fcde2df11fbdadd15efab0e87\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\990c7cd8dcc74e5778c8ff7fe49acbcd\vectordrawable-1.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1c9d349481384a40450e33ad6ad0279f\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0a231a2f06c144f773e8c62fe43e0577\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:15:1-40:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0684522da886214492d20aefd6f115e6\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\48940feab4b9c8ce0967e4f4c51f50d4\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8737bc0ea7015198515e6420f762a81f\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\39df9a34b84cb44bd04055d6093b8722\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\be6bbbfa505cb01198bd20228772b2cd\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\05b20e8c6a13bc56c601f21d14654dda\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\086c01f9198276f12723e7fa79875bfb\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4ba00b2c91c6fa672f01aaa34e78aade\jetified-firebase-database-collection-17.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:17:1-29:12
+MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1467b21f4f7953f8ecb23e77fe9e6412\navigation-fragment-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment-ktx:1.1.0-alpha09] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ca87fd1f064ac738868055f3ceedfbfa\jetified-fragment-ktx-1.1.0-alpha09\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4bb957a4e8f8a94d25509e3e49b52563\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0-alpha09] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6152c969c96987473f959054a9eb7b8a\fragment-1.1.0-alpha09\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\2c77119a9d8e0139688331300e850b02\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\839d434050bdcac63a5df1dd4293d96b\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\efa09318399310c362852ff1e3991ffb\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f4a3c664d795590fd79e5c1ce41dd501\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\18a961a1ea35ed8262122f645900ab9c\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\663976d79a3a8b9aa4227c56ba2ca871\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\acb91f455502f77b155ac440f731d178\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\129cd67f4aebc82569a093d529d9156b\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\cef5dcb0eaf6857e4083d789ca48eb00\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e2e90dc76af1e03962b9b219972c96ae\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8101cca1e3228de79908bf8700a19f5d\navigation-runtime-ktx-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d2ee7cc60194ce71d0a8a747f611d183\navigation-runtime-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.0.0-alpha08] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76aa494b8c0d308884c35ab5bb4363ee\jetified-activity-ktx-1.0.0-alpha08\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0-alpha08] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8b09bdfd9d0418baa3d44db16221b91d\jetified-activity-1.0.0-alpha08\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\84f3a4041e5012264fdc08d5f273c518\navigation-common-ktx-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\40743a607d17740801418afc50d72229\navigation-common-2.1.0-alpha04\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\73a2f8253036dc3f6d58100c2aebf178\transition-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\32cbaca0b94baf613f9f64bbc45cabc8\versionedparcelable-1.1.0-beta01\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f41d1ad174bb918496263f011595911b\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a2f250cbe96857008335cc4ca48c1d5a\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\90997256866665d7f5c2df986316b928\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\65869b49fd92887efcef1d8c000e7b57\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8f2092b0f1372c4a25b824833e6ef8a2\lifecycle-runtime-2.2.0-alpha01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a0cba61ecd267239ce4e7e4846a5a602\jetified-lifecycle-viewmodel-ktx-2.2.0-alpha01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3ecff73a40769d86abe5e0b56b443f33\lifecycle-viewmodel-2.2.0-alpha01\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a9a15be6ee767e48b43221dc38c584bc\jetified-savedstate-1.0.0-beta01\AndroidManifest.xml:17:1-22:12
+MERGED from [io.michaelrocks:libphonenumber-android:8.10.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\040b0334355a13792fb271ca916dd3c1\jetified-libphonenumber-android-8.10.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e3f1ded8665705dc1033d46e63cdf8d4\jetified-protolite-well-known-types-17.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:2:1-13:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:3:11-62
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:5:5-25:19
+MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:11:5-15:19
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0e820a7b427206e4834416a263566d7e\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0e820a7b427206e4834416a263566d7e\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\04df544b3cf832f53f559e9b00bc9057\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\04df544b3cf832f53f559e9b00bc9057\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a3ca69d6aeaeb5ffd78e4b8ae906c2e4\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a3ca69d6aeaeb5ffd78e4b8ae906c2e4\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:26:5-89:19
+MERGED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:26:5-89:19
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:29:5-37:19
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f030f4919d8ac4899639544b419759c0\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f030f4919d8ac4899639544b419759c0\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:16:5-24:19
+MERGED from [com.xwray:groupie:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1cc2ec7e30d975b0883b1a03607575c8\jetified-groupie-2.7.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.xwray:groupie:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1cc2ec7e30d975b0883b1a03607575c8\jetified-groupie-2.7.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.xwray:groupie-databinding:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5d8527394b4119e64c4add57c55b932a\jetified-groupie-databinding-2.7.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.xwray:groupie-databinding:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5d8527394b4119e64c4add57c55b932a\jetified-groupie-databinding-2.7.0\AndroidManifest.xml:11:5-12:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0a231a2f06c144f773e8c62fe43e0577\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0a231a2f06c144f773e8c62fe43e0577\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:25:5-38:19
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:25:5-38:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8737bc0ea7015198515e6420f762a81f\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8737bc0ea7015198515e6420f762a81f\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\086c01f9198276f12723e7fa79875bfb\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\086c01f9198276f12723e7fa79875bfb\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4bb957a4e8f8a94d25509e3e49b52563\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4bb957a4e8f8a94d25509e3e49b52563\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\32cbaca0b94baf613f9f64bbc45cabc8\versionedparcelable-1.1.0-beta01\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\32cbaca0b94baf613f9f64bbc45cabc8\versionedparcelable-1.1.0-beta01\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:10:13-39
+	android:label
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:8:13-45
+	android:roundIcon
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:9:13-58
+	android:icon
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:7:13-47
+	android:allowBackup
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:6:13-39
+	android:theme
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:11:13-44
+activity#net.simplifiedcoding.firebaseauthtutorial.ui.ResetPasswordActivity
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:12:9-13:20
+	android:name
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:12:19-59
+activity#net.simplifiedcoding.firebaseauthtutorial.ui.HomeActivity
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:14:9-15:20
+	android:name
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:14:19-50
+activity#net.simplifiedcoding.firebaseauthtutorial.ui.RegisterActivity
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:16:9-17:20
+	android:name
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:16:19-54
+activity#net.simplifiedcoding.firebaseauthtutorial.ui.LoginActivity
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:18:9-24:20
+	android:name
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:18:19-51
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:20:17-68
+	android:name
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:22:17-76
+	android:name
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76533580e236e451d73b47503899251c\databinding-adapters-3.6.1\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-adapters:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76533580e236e451d73b47503899251c\databinding-adapters-3.6.1\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a49c5ef996bf3c024c66807f41de5e19\databinding-runtime-3.6.1\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:databinding-runtime:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a49c5ef996bf3c024c66807f41de5e19\databinding-runtime-3.6.1\AndroidManifest.xml:22:5-44
+MERGED from [androidx.databinding:viewbinding:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8139345a24c38f53d9d72e5976f77a97\jetified-viewbinding-3.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8139345a24c38f53d9d72e5976f77a97\jetified-viewbinding-3.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d455c38cd3998a34e4946345a0137d39\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d455c38cd3998a34e4946345a0137d39\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.xwray:groupie-kotlin-android-extensions:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\20c96b68fa25b58b5ca367317e87d3f8\jetified-groupie-kotlin-android-extensions-2.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie-kotlin-android-extensions:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\20c96b68fa25b58b5ca367317e87d3f8\jetified-groupie-kotlin-android-extensions-2.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:7:5-9:41
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0e820a7b427206e4834416a263566d7e\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0e820a7b427206e4834416a263566d7e\jetified-fastscroll-0.2.5\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\12d5a5b3f1042d238be2a50d34f90bbe\navigation-ui-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\12d5a5b3f1042d238be2a50d34f90bbe\navigation-ui-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea62f9d1a1799e32d9ea85eec2f5887f\navigation-ui-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea62f9d1a1799e32d9ea85eec2f5887f\navigation-ui-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\04df544b3cf832f53f559e9b00bc9057\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\04df544b3cf832f53f559e9b00bc9057\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\407a2836b8ae1616e4a7552af73bb631\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\407a2836b8ae1616e4a7552af73bb631\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.0.2] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\2c223e944795b93796b1a247dd0f47fc\jetified-core-ktx-1.0.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.0.2] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\2c223e944795b93796b1a247dd0f47fc\jetified-core-ktx-1.0.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a3ca69d6aeaeb5ffd78e4b8ae906c2e4\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a3ca69d6aeaeb5ffd78e4b8ae906c2e4\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3992e1781d2b333ccb804ff98d11296d\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3992e1781d2b333ccb804ff98d11296d\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6bce9ecfc586a01cf7a7850ece828605\navigation-fragment-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6bce9ecfc586a01cf7a7850ece828605\navigation-fragment-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f030f4919d8ac4899639544b419759c0\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f030f4919d8ac4899639544b419759c0\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1cc2ec7e30d975b0883b1a03607575c8\jetified-groupie-2.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1cc2ec7e30d975b0883b1a03607575c8\jetified-groupie-2.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie-databinding:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5d8527394b4119e64c4add57c55b932a\jetified-groupie-databinding-2.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.xwray:groupie-databinding:2.7.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5d8527394b4119e64c4add57c55b932a\jetified-groupie-databinding-2.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\bc3e07ddd1635867cf0e6e7f4cead51f\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\bc3e07ddd1635867cf0e6e7f4cead51f\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\14c6b0794b51cc16b3063609de227548\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\14c6b0794b51cc16b3063609de227548\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\86b23a8d8b1736b2ba955458c6c060cc\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\86b23a8d8b1736b2ba955458c6c060cc\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4a61e31f7abaaeef07c3cf56f57bf2ef\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4a61e31f7abaaeef07c3cf56f57bf2ef\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3454815fcde2df11fbdadd15efab0e87\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3454815fcde2df11fbdadd15efab0e87\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\990c7cd8dcc74e5778c8ff7fe49acbcd\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\990c7cd8dcc74e5778c8ff7fe49acbcd\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1c9d349481384a40450e33ad6ad0279f\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1c9d349481384a40450e33ad6ad0279f\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0a231a2f06c144f773e8c62fe43e0577\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0a231a2f06c144f773e8c62fe43e0577\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0684522da886214492d20aefd6f115e6\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0684522da886214492d20aefd6f115e6\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\48940feab4b9c8ce0967e4f4c51f50d4\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\48940feab4b9c8ce0967e4f4c51f50d4\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8737bc0ea7015198515e6420f762a81f\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8737bc0ea7015198515e6420f762a81f\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\39df9a34b84cb44bd04055d6093b8722\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\39df9a34b84cb44bd04055d6093b8722\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\be6bbbfa505cb01198bd20228772b2cd\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\be6bbbfa505cb01198bd20228772b2cd\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\05b20e8c6a13bc56c601f21d14654dda\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\05b20e8c6a13bc56c601f21d14654dda\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\086c01f9198276f12723e7fa79875bfb\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\086c01f9198276f12723e7fa79875bfb\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4ba00b2c91c6fa672f01aaa34e78aade\jetified-firebase-database-collection-17.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:17.0.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4ba00b2c91c6fa672f01aaa34e78aade\jetified-firebase-database-collection-17.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1467b21f4f7953f8ecb23e77fe9e6412\navigation-fragment-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\1467b21f4f7953f8ecb23e77fe9e6412\navigation-fragment-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.1.0-alpha09] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ca87fd1f064ac738868055f3ceedfbfa\jetified-fragment-ktx-1.1.0-alpha09\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.1.0-alpha09] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ca87fd1f064ac738868055f3ceedfbfa\jetified-fragment-ktx-1.1.0-alpha09\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4bb957a4e8f8a94d25509e3e49b52563\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\4bb957a4e8f8a94d25509e3e49b52563\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha09] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6152c969c96987473f959054a9eb7b8a\fragment-1.1.0-alpha09\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0-alpha09] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6152c969c96987473f959054a9eb7b8a\fragment-1.1.0-alpha09\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\2c77119a9d8e0139688331300e850b02\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\2c77119a9d8e0139688331300e850b02\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\839d434050bdcac63a5df1dd4293d96b\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\839d434050bdcac63a5df1dd4293d96b\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\efa09318399310c362852ff1e3991ffb\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\efa09318399310c362852ff1e3991ffb\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f4a3c664d795590fd79e5c1ce41dd501\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f4a3c664d795590fd79e5c1ce41dd501\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\18a961a1ea35ed8262122f645900ab9c\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\18a961a1ea35ed8262122f645900ab9c\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\663976d79a3a8b9aa4227c56ba2ca871\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\663976d79a3a8b9aa4227c56ba2ca871\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\acb91f455502f77b155ac440f731d178\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\acb91f455502f77b155ac440f731d178\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\129cd67f4aebc82569a093d529d9156b\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\129cd67f4aebc82569a093d529d9156b\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\cef5dcb0eaf6857e4083d789ca48eb00\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\cef5dcb0eaf6857e4083d789ca48eb00\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e2e90dc76af1e03962b9b219972c96ae\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e2e90dc76af1e03962b9b219972c96ae\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8101cca1e3228de79908bf8700a19f5d\navigation-runtime-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8101cca1e3228de79908bf8700a19f5d\navigation-runtime-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d2ee7cc60194ce71d0a8a747f611d183\navigation-runtime-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d2ee7cc60194ce71d0a8a747f611d183\navigation-runtime-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.0.0-alpha08] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76aa494b8c0d308884c35ab5bb4363ee\jetified-activity-ktx-1.0.0-alpha08\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.0.0-alpha08] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76aa494b8c0d308884c35ab5bb4363ee\jetified-activity-ktx-1.0.0-alpha08\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha08] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8b09bdfd9d0418baa3d44db16221b91d\jetified-activity-1.0.0-alpha08\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0-alpha08] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8b09bdfd9d0418baa3d44db16221b91d\jetified-activity-1.0.0-alpha08\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\84f3a4041e5012264fdc08d5f273c518\navigation-common-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\84f3a4041e5012264fdc08d5f273c518\navigation-common-ktx-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\40743a607d17740801418afc50d72229\navigation-common-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.1.0-alpha04] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\40743a607d17740801418afc50d72229\navigation-common-2.1.0-alpha04\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\73a2f8253036dc3f6d58100c2aebf178\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\73a2f8253036dc3f6d58100c2aebf178\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\32cbaca0b94baf613f9f64bbc45cabc8\versionedparcelable-1.1.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\32cbaca0b94baf613f9f64bbc45cabc8\versionedparcelable-1.1.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f41d1ad174bb918496263f011595911b\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\f41d1ad174bb918496263f011595911b\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a2f250cbe96857008335cc4ca48c1d5a\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a2f250cbe96857008335cc4ca48c1d5a\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\90997256866665d7f5c2df986316b928\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\90997256866665d7f5c2df986316b928\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\65869b49fd92887efcef1d8c000e7b57\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\65869b49fd92887efcef1d8c000e7b57\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8f2092b0f1372c4a25b824833e6ef8a2\lifecycle-runtime-2.2.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8f2092b0f1372c4a25b824833e6ef8a2\lifecycle-runtime-2.2.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a0cba61ecd267239ce4e7e4846a5a602\jetified-lifecycle-viewmodel-ktx-2.2.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a0cba61ecd267239ce4e7e4846a5a602\jetified-lifecycle-viewmodel-ktx-2.2.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3ecff73a40769d86abe5e0b56b443f33\lifecycle-viewmodel-2.2.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0-alpha01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3ecff73a40769d86abe5e0b56b443f33\lifecycle-viewmodel-2.2.0-alpha01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a9a15be6ee767e48b43221dc38c584bc\jetified-savedstate-1.0.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a9a15be6ee767e48b43221dc38c584bc\jetified-savedstate-1.0.0-beta01\AndroidManifest.xml:20:5-44
+MERGED from [io.michaelrocks:libphonenumber-android:8.10.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\040b0334355a13792fb271ca916dd3c1\jetified-libphonenumber-android-8.10.1\AndroidManifest.xml:7:5-9:41
+MERGED from [io.michaelrocks:libphonenumber-android:8.10.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\040b0334355a13792fb271ca916dd3c1\jetified-libphonenumber-android-8.10.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e3f1ded8665705dc1033d46e63cdf8d4\jetified-protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e3f1ded8665705dc1033d46e63cdf8d4\jetified-protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:14:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:23:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:13:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:24:22-76
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:27:9-34:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:29:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:31:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:32:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:33:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:34:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:28:13-85
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:35:9-52:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:37:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:39:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:38:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:40:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:36:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:41:13-51:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:42:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:42:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:44:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:44:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:45:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:45:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:47:17-50:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:49:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:48:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:50:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:53:9-70:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:55:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:57:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:56:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:58:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:54:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:59:13-69:29
+service#com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:72:9-81:19
+	android:enabled
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:74:13-35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:75:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:73:13-101
+intent-filter#action:name:com.google.firebase.auth.api.gms.service.START+category:name:android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:76:13-80:29
+action#com.google.firebase.auth.api.gms.service.START
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:77:17-89
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:77:25-86
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:82:9-88:19
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:33:9-37:35
+MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:33:9-37:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:84:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:37:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:35:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:83:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:85:13-87:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:87:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:86:17-109
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:33:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\ea0348f2e28a49ccf5f2702acf15e382\jetified-firebase-storage-19.2.0\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:21.2.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\3bff7c01bbf3ba0aa4367b4a6492d814\jetified-firebase-firestore-21.2.1\AndroidManifest.xml:21:17-111
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:26:9-31:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:30:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:29:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:31:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\6b1e4f0dafb13030c9243ad8167e53bf\jetified-firebase-common-19.3.1\AndroidManifest.xml:27:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a1697a62fac9d0821935cd63569f9d05\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\d36b64796fd9c91a304cf064ab6c5fe5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
