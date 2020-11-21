@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/test.iml" filepath="$PROJECT_DIR$/.idea/modules/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/test.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/test.app.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Lol-matching-app.iml" filepath="$PROJECT_DIR$/.idea/modules/Lol-matching-app.iml" group="Lol-matching-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Lol-matching-app/app" />
+>>>>>>> 2bf64935ccadca8b33390d11b39c69c061119e97
     </modules>
   </component>
 </project>

@@ -48,17 +48,12 @@ class HomeFragment : Fragment() {
 
             val selectedItems = ArrayList<Int>()
             var builder = AlertDialog.Builder(context)
-                .setTitle("Choice")
-                .setMessage("Your position")
-                .setMultiChoiceItems(R.array.lane, null,
-                    DialogInterface.OnMultiChoiceClickListener { dialog, which, isChecked ->
-                        if (isChecked) {
-                            // If the user checked the item, add it to the selected items
-                            selectedItems.add(which)
-                        } else if (selectedItems.contains(which)) {
-                            // Else, if the item is already in the array, remove it
-                            selectedItems.remove(Integer.valueOf(which))
-                        }
+                .setTitle("CHoice Your Lane")
+//                .setMessage("Your position")
+                .setSingleChoiceItems(R.array.lane, 1,
+                    DialogInterface.OnClickListener { dialogInterface, i ->
+                        selectedItems.add(i)
+
                     })
                 .setPositiveButton("OK",
                     DialogInterface.OnClickListener { dialog, id ->
@@ -67,11 +62,27 @@ class HomeFragment : Fragment() {
                 .setNegativeButton("Cancel",
                     DialogInterface.OnClickListener { dialog, id ->
                     // User cancelled the dialog
+                    }).show()
+
+            var builder2 = AlertDialog.Builder(context)
+                .setTitle("Choice Partner Lane")
+//                .setMessage("Your position")
+                .setSingleChoiceItems(R.array.lane, 1,
+                    DialogInterface.OnClickListener { dialogInterface, i ->
+                        selectedItems.add(i)
+
                     })
-                .create().show()
+                .setPositiveButton("OK",
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // User clicked OK button
+                    })
+                .setNegativeButton("Cancel",
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // User cancelled the dialog
+                    }).show()
 
 
-//            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting)
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting)
         }
 
 

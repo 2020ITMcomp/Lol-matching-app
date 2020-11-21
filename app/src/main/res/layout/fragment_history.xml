@@ -42,6 +42,7 @@
 
 
     <LinearLayout
+<<<<<<< HEAD
             android:id="@+id/Linear_second"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,6 +133,12 @@
 
 
 
+=======
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    </LinearLayout>
+>>>>>>> 2bf64935ccadca8b33390d11b39c69c061119e97
 
 
 </FrameLayout>
