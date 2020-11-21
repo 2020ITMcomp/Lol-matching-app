@@ -6,9 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+8-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+9-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:23:5-67
@@ -18,48 +18,48 @@
 12-->[com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:24:22-76
 13
 14    <application
-14-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:5:5-25:19
+14-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:5:5-25:19
 15        android:name="androidx.multidex.MultiDexApplication"
 16        android:allowBackup="true"
-16-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:6:13-39
+16-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:6:13-39
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:22:18-86
 18        android:debuggable="true"
 19        android:icon="@mipmap/ic_launcher"
-19-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:7:13-47
+19-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:7:13-47
 20        android:label="@string/app_name"
-20-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:8:13-45
+20-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:8:13-45
 21        android:roundIcon="@mipmap/ic_launcher_round"
-21-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:9:13-58
+21-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:9:13-58
 22        android:supportsRtl="true"
-22-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:10:13-39
+22-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:10:13-39
 23        android:testOnly="true"
 24        android:theme="@style/AppTheme" >
-24-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:11:13-44
+24-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:11:13-44
 25        <activity android:name="net.simplifiedcoding.firebaseauthtutorial.ui.ResetPasswordActivity" >
-25-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:12:9-13:20
-25-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:12:19-59
+25-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:12:9-13:20
+25-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:12:19-59
 26        </activity>
 27        <activity android:name="net.simplifiedcoding.firebaseauthtutorial.ui.HomeActivity" >
-27-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:14:9-15:20
-27-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:14:19-50
+27-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:14:9-15:20
+27-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:14:19-50
 28        </activity>
 29        <activity android:name="net.simplifiedcoding.firebaseauthtutorial.ui.RegisterActivity" >
-29-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:16:9-17:20
-29-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:16:19-54
+29-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:16:9-17:20
+29-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:16:19-54
 30        </activity>
 31        <activity android:name="net.simplifiedcoding.firebaseauthtutorial.ui.LoginActivity" >
-31-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:18:9-24:20
-31-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:18:19-51
+31-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:18:9-24:20
+31-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:18:19-51
 32            <intent-filter>
-32-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:19:13-23:29
+32-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:19:13-23:29
 33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:20:17-68
-33-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:20:25-66
+33-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:20:17-68
+33-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:20:25-66
 34
 35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:22:17-76
-35-->C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:22:27-74
+35-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:22:17-76
+35-->C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:22:27-74
 36            </intent-filter>
 37        </activity>
 38        <activity

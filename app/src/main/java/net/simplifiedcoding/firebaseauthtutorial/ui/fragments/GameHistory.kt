@@ -1,5 +1,6 @@
 package net.simplifiedcoding.firebaseauthtutorial.ui.fragments
 
+import android.app.ActionBar
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

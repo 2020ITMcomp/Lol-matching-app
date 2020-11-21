@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
 MERGED from [androidx.databinding:databinding-adapters:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76533580e236e451d73b47503899251c\databinding-adapters-3.6.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a49c5ef996bf3c024c66807f41de5e19\databinding-runtime-3.6.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:viewbinding:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\8139345a24c38f53d9d72e5976f77a97\jetified-viewbinding-3.6.1\AndroidManifest.xml:17:1-22:12
@@ -79,25 +79,25 @@ MERGED from [androidx.savedstate:savedstate:1.0.0-beta01] C:\Users\Seung kyu Hon
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\040b0334355a13792fb271ca916dd3c1\jetified-libphonenumber-android-8.10.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e3f1ded8665705dc1033d46e63cdf8d4\jetified-protolite-well-known-types-17.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:3:11-62
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:3:11-62
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:1-27:12
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:5:5-25:19
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:5:5-25:19
 MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:11:5-15:19
 MERGED from [com.hbb20:ccp:2.2.9] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5710e88a1a758539737c7a40d1d1a610\jetified-ccp-2.2.9\AndroidManifest.xml:11:5-15:19
 MERGED from [com.futuremind.recyclerfastscroll:fastscroll:0.2.5] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0e820a7b427206e4834416a263566d7e\jetified-fastscroll-0.2.5\AndroidManifest.xml:11:5-20
@@ -141,47 +141,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0-beta01] C:\U
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0-beta01] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\875e92a50dcf543e6227ee72a898a36c\core-1.1.0-beta01\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:10:13-39
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:10:13-39
 	android:label
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:8:13-45
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:8:13-45
 	android:roundIcon
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:9:13-58
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:9:13-58
 	android:icon
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:7:13-47
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:7:13-47
 	android:allowBackup
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:6:13-39
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:6:13-39
 	android:theme
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:11:13-44
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:11:13-44
 activity#net.simplifiedcoding.firebaseauthtutorial.ui.ResetPasswordActivity
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:12:9-13:20
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:12:9-13:20
 	android:name
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:12:19-59
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:12:19-59
 activity#net.simplifiedcoding.firebaseauthtutorial.ui.HomeActivity
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:14:9-15:20
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:14:9-15:20
 	android:name
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:14:19-50
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:14:19-50
 activity#net.simplifiedcoding.firebaseauthtutorial.ui.RegisterActivity
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:16:9-17:20
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:16:9-17:20
 	android:name
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:16:19-54
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:16:19-54
 activity#net.simplifiedcoding.firebaseauthtutorial.ui.LoginActivity
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:18:19-51
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:18:19-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:20:17-68
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:20:17-68
 	android:name
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:22:17-76
+ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:22:17-76
 	android:name
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml:22:27-74
 uses-sdk
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:databinding-adapters:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76533580e236e451d73b47503899251c\databinding-adapters-3.6.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-adapters:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\76533580e236e451d73b47503899251c\databinding-adapters-3.6.1\AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.6.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\a49c5ef996bf3c024c66807f41de5e19\databinding-runtime-3.6.1\AndroidManifest.xml:22:5-44
@@ -332,16 +332,16 @@ MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Seu
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\e3f1ded8665705dc1033d46e63cdf8d4\jetified-protolite-well-known-types-17.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\5e2f7d75f02fbfa0f573caf12d3e779a\jetified-grpc-android-1.21.0\AndroidManifest.xml:7:5-9:41
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Seung kyu Hong\Desktop\test\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.firebase:firebase-auth:20.0.0] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\323a17459b968c3cd829499fe645b616\jetified-firebase-auth-20.0.0\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-database:19.5.1] C:\Users\Seung kyu Hong\.gradle\caches\transforms-2\files-2.1\0547e1ffcb3806bbd2e80ca5a1bffb78\jetified-firebase-database-19.5.1\AndroidManifest.xml:26:5-67

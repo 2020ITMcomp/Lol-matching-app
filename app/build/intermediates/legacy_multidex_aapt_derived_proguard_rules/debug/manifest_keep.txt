@@ -1,4 +1,4 @@
-# Referenced at C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:14
+# Referenced at C:\Users\Seung kyu Hong\Desktop\test\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:14
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
-# Referenced at C:\Users\Seung kyu Hong\Desktop\Lol-matching-app-main\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:14
+# Referenced at C:\Users\Seung kyu Hong\Desktop\test\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:14
 -keep class androidx.multidex.MultiDexApplication { <init>(); }
