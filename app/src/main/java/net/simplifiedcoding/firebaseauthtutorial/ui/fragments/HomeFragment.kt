@@ -17,8 +17,11 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.coroutines.Delay
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
+import net.simplifiedcoding.firebaseauthtutorial.utils.addNewRoom
+import net.simplifiedcoding.firebaseauthtutorial.utils.addRoomToUser
 
 
 class HomeFragment : Fragment() {
@@ -39,50 +42,26 @@ class HomeFragment : Fragment() {
         //Log.d(TAG, mUser.displayName) TODO : 일단은 사용자의 닉네임을 입력하도록 해야한다.
 
         binding.createRoomButton.setOnClickListener{
-            createNewRoom()
+
+//            addNewRoom(mUser.uid).addOnSuccessListener { documentReference ->
+//                Log.d("createNewRoom", "Successfully created the room : ${documentReference.id}")
+//                val roomId = documentReference.id
+//                addRoomToUser(mUser.uid, roomId)
+//
+//                var bundle = bundleOf(
+//                    "roomId" to roomId
+//                )
+//                // Navigate to chatRoom
+//                Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_chatRoomFragment, bundle)
+//            }.addOnFailureListener { e ->
+//                Log.w("createNewRoom", "Can not create a new room!", e)
+//            }
         }
         binding.checkRoomButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
         }
         binding.searchRoomButton.setOnClickListener {
-
-            val selectedItems = ArrayList<Int>()
-            var builder = AlertDialog.Builder(context)
-                .setTitle("CHoice Your Lane")
-//                .setMessage("Your position")
-                .setSingleChoiceItems(R.array.lane, 1,
-                    DialogInterface.OnClickListener { dialogInterface, i ->
-                        selectedItems.add(i)
-
-                    })
-                .setPositiveButton("OK",
-                    DialogInterface.OnClickListener { dialog, id ->
-                        // User clicked OK button
-                    })
-                .setNegativeButton("Cancel",
-                    DialogInterface.OnClickListener { dialog, id ->
-                    // User cancelled the dialog
-                    }).show()
-
-            var builder2 = AlertDialog.Builder(context)
-                .setTitle("Choice Partner Lane")
-//                .setMessage("Your position")
-                .setSingleChoiceItems(R.array.lane, 1,
-                    DialogInterface.OnClickListener { dialogInterface, i ->
-                        selectedItems.add(i)
-
-                    })
-                .setPositiveButton("OK",
-                    DialogInterface.OnClickListener { dialog, id ->
-                        // User clicked OK button
-                    })
-                .setNegativeButton("Cancel",
-                    DialogInterface.OnClickListener { dialog, id ->
-                        // User cancelled the dialog
-                    }).show()
-
-
-            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting)
+            dialogBuilder()
         }
 
 
@@ -90,61 +69,57 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-
-    private fun createNewRoom(){
-
-        // TODO : 유저의 선호 라인 및 원하는 상대방 라인에 대한 정보를 가져와서 추가해주어야 한다.
-        var roomId : String
-        val room = hashMapOf(
-            "createUser" to mUser!!.uid,
-            "userPosition" to "Jungle",
-            "otherPosition" to "Mid lane",
-            "timeStamp" to System.currentTimeMillis().toString(),
-            "isClosed" to false
-        )
-
-        // TODO : 지금 생각하는 방식으로는 비합리적이긴 한데,
-        // 그냥 Closed room과 opened room 을 모두 하나의 room collection으로 사용하도록 하자. (임시)
-
-        val ref = db.collection("rooms").add(room).addOnSuccessListener { documentReference ->
-            Log.d(TAG, "Successfully created the room : ${documentReference.id}")
-            
-            roomId = documentReference.id
-            referenceToUser(roomId)
-
-            var bundle = bundleOf(
-                "roomId" to roomId
-            )
-            // Navigate to chatRoom
-            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_chatRoomFragment, bundle)
-
-        }.addOnFailureListener { e ->
-            Log.w(TAG, "Can not create a new room!", e)
-            // TODO 만들지 못했을 때, 다시 돌아가도록 하는 로직 작성.
-        }
+    private fun dialogBuilder(){
+        var summonerBuilder = AlertDialog.Builder(context)
+            .setTitle("CHoice Your Lane")
+            .setSingleChoiceItems(R.array.lane, -1,
+                DialogInterface.OnClickListener { dialogInterface, i ->
+                    summonerLane = i
+                })
+            .setPositiveButton("OK",
+                DialogInterface.OnClickListener { dialog, id ->
+                    // 자신의 라인 선택이 완료 되었을 때,
+                    if(summonerLane == -1)return@OnClickListener
+                    partnerDialogBuilder()
+                })
+            .setNegativeButton("Cancel",
+                DialogInterface.OnClickListener { dialog, id ->
+                    return@OnClickListener
+                }).show()
 
     }
 
-    private fun referenceToUser(roomId : String){
+    private fun partnerDialogBuilder(){
+        var partnerBuilder = AlertDialog.Builder(context)
+            .setTitle("Choice Partner Lane")
+//                .setMessage("Your position")
+            .setSingleChoiceItems(R.array.lane, -1,
+                DialogInterface.OnClickListener { dialogInterface, i ->
+                    partnerLane = i
+                })
+            .setPositiveButton("OK",
+                DialogInterface.OnClickListener { dialog, id ->
+                    // 라인 선택이 완료 된 후에, lane에 대한 데이터를 넘겨주고 -> Navigation
+                    if(partnerLane == -1)return@OnClickListener
+                    val bundle = bundleOf(
+                        "summonerLane" to summonerLane,
+                        "partnerLane" to partnerLane
+                    )
+                    Log.d(TAG, bundle.toString())
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting, bundle)
 
-        val room = hashMapOf( // 추가적으로 데이터가 필요한지는 생각해봐야 할 듯.
-            "roomId" to roomId
-        )
-
-        val userRef = db.collection("users").document(mUser.uid)
-            .collection("enteredRoom").add(room)
-            .addOnSuccessListener { it ->
-                Log.d(TAG, "Successfully adding a room to the user : ${it.id}")
-            }
-            .addOnFailureListener { e ->
-                Log.w(TAG, "Can not adding a room to the user!", e)
-            }
-
+                })
+            .setNegativeButton("Cancel",
+                DialogInterface.OnClickListener { dialog, id ->
+                    return@OnClickListener
+                }).show()
     }
 
     companion object{
 
         private const val TAG = "HomeFragment Test"
+        private var summonerLane : Int = -1
+        private var partnerLane : Int = -1
 
     }
 
