@@ -1,6 +1,8 @@
 package net.simplifiedcoding.firebaseauthtutorial.ui.fragments
 
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -43,7 +45,33 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
         }
         binding.searchRoomButton.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting)
+
+            val selectedItems = ArrayList<Int>()
+            var builder = AlertDialog.Builder(context)
+                .setTitle("Choice")
+                .setMessage("Your position")
+                .setMultiChoiceItems(R.array.lane, null,
+                    DialogInterface.OnMultiChoiceClickListener { dialog, which, isChecked ->
+                        if (isChecked) {
+                            // If the user checked the item, add it to the selected items
+                            selectedItems.add(which)
+                        } else if (selectedItems.contains(which)) {
+                            // Else, if the item is already in the array, remove it
+                            selectedItems.remove(Integer.valueOf(which))
+                        }
+                    })
+                .setPositiveButton("OK",
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // User clicked OK button
+                    })
+                .setNegativeButton("Cancel",
+                    DialogInterface.OnClickListener { dialog, id ->
+                    // User cancelled the dialog
+                    })
+                .create().show()
+
+
+//            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting)
         }
         binding.gameHistoryButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_gameHistory)
