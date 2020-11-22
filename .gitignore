@@ -147,3 +147,8 @@ fabric.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/android
 /app/google-services.json
+/app/build/generated/source/navigation-args/debug/
+/app/build/generated/ap_generated_sources/debug/out/
+/app/build/generated/source/buildConfig/debug/
+/build/
+/app/build/
