@@ -8,6 +8,7 @@
 
 
     <LinearLayout
+            android:id="@+id/userAbstract"
             android:layout_width="wrap_content"
             android:layout_height="125dp"
             android:layout_marginBottom="500dp"
@@ -21,30 +22,66 @@
                 android:background="@drawable/image" />
 
 
-
-        <LinearLayout
-                android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nameAndRate"
+                android:layout_width="136dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:orientation="vertical">
 
             <TextView
                     android:id="@+id/name"
-                    android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:layout_weight='2'
                     android:gravity="center_vertical"
                     android:text="하계동 맘스터치"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
+                    android:id="@+id/level"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="level or 승률"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="9dp"
                     android:layout_weight="1"
-                    android:id="@+id/level"/>
-        </LinearLayout>
+                    android:gravity="center_horizontal"
+                    android:text="Level : 344"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                    android:id="@+id/totalWinRate"
+                    android:layout_width="66dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="54.4%"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/level" />
+
+            <TextView
+                    android:id="@+id/totalKDA"
+                    android:layout_width="66dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="KDA : 3.14"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/totalWinRate"
+                    app:layout_constraintTop_toBottomOf="@+id/level" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
                 android:layout_marginTop="10dp"
@@ -156,7 +193,6 @@
     </LinearLayout>
 
 
-<!--    여기에 Drawlayout 설치하자-->
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -174,21 +210,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="501dp">
 
-
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/historyView"
-                android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_marginTop="36dp"
-                android:scrollbars="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:stackFromEnd="true" />
 
         <Button
                 android:id="@+id/renewalButton"
@@ -199,6 +222,18 @@
                 android:text="전적갱신"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="152dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:stackFromEnd="true" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- TODO: Update blank fragment layout -->

@@ -13,6 +13,8 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentMatchHistoryBinding
+import net.simplifiedcoding.firebaseauthtutorial.utils.getSummonerInfoRef
+import net.simplifiedcoding.firebaseauthtutorial.utils.getUserNicknameRef
 import net.simplifiedcoding.firebaseauthtutorial.utils.userRenewalHistory
 
 
@@ -32,6 +34,8 @@ class MatchHistory : Fragment() {
         uid = FirebaseAuth.getInstance().uid.toString()
 
 
+        InputUserAbstract()
+
         recyclerView = binding.historyView.apply {
             setHasFixedSize(true)
             adapter = matchAdapter
@@ -48,6 +52,21 @@ class MatchHistory : Fragment() {
 
 
         return binding.root
+    }
+
+    private fun InputUserAbstract() {
+        binding.userAbstract.apply {
+
+            getUserNicknameRef(uid).addOnSuccessListener {
+//                it.
+                // 최종적으로 받은 다음에
+                this.
+            }.addOnFailureListener {
+                // TODO 돌아가게 하기
+            }
+//            val summonerInfo = getSummonerInfoRef()
+        }
+
     }
 
 
