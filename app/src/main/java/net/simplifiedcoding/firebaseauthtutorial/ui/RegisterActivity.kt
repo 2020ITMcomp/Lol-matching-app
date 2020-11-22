@@ -28,6 +28,14 @@ class RegisterActivity : AppCompatActivity() {
         button_register.setOnClickListener {
             val email = text_email.text.toString().trim()
             val password = edit_text_password.text.toString().trim()
+            val nickname = text_nickname.text.toString()
+
+            if(nickname.isEmpty()){
+                text_nickname.error = "Nickname required"
+                text_nickname.requestFocus()
+                return@setOnClickListener
+            }
+
 
             if (email.isEmpty()) {
                 text_email.error = "Email Required"
@@ -47,7 +55,7 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            registerUser(email, password)
+            registerUser(nickname, email, password)
 
         }
 
@@ -56,13 +64,13 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerUser(email: String, password: String) {
+    private fun registerUser(nickname : String, email: String, password: String) {
         progressbar.visibility = View.VISIBLE
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 progressbar.visibility = View.GONE
                 if (task.isSuccessful) {
-                    inputInitailInformation(email, mAuth.uid!!)
+                    inputInitailInformation(nickname, email, mAuth.uid!!)
                     login()
                 } else {
                     task.exception?.message?.let {
@@ -72,17 +80,14 @@ class RegisterActivity : AppCompatActivity() {
             }
     }
 
-    private fun inputInitailInformation(email : String, uid : String){
+    private fun inputInitailInformation(nickname: String, email : String, uid : String){
         val user = hashMapOf(
-            "userEmail" to email
+            "userEmail" to email,
+            "nickname" to nickname
         )
 
-        db.collection("users").document(uid).collection("userInfo")
-            .add(user).addOnSuccessListener { documentReference ->
-            Log.d(Companion.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
-        }.addOnFailureListener { e ->
-            Log.w(Companion.TAG, "Error adding document", e)
-        }
+        db.collection("users").document(uid).set(user)
+
     }
 
     override fun onStart() {
@@ -91,6 +96,8 @@ class RegisterActivity : AppCompatActivity() {
             login()
         }
     }
+
+
 
     companion object{
         private const val TAG = "Register Test"
