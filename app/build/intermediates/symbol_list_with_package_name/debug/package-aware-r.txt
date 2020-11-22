@@ -673,6 +673,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -722,6 +723,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gold
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -774,6 +776,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1397,7 +1400,6 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_phone
 drawable ic_point
 drawable image
-drawable loading
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1413,6 +1415,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable round_rectangular
 drawable rounded_rectangle_mint
 drawable rounded_rectangle_orange
 drawable rounded_rectangle_purple
@@ -1453,6 +1456,13 @@ id LOCALE_NETWORK_SIM
 id LOCALE_ONLY
 id LOCALE_SIM
 id LOCALE_SIM_NETWORK
+id Linear_first
+id Linear_second
+id Linear_second_first
+id Linear_second_second
+id Linear_second_third
+id Linear_third
+id Linear_total
 id META
 id MOBILE
 id NETWORK_LOCALE
@@ -1556,6 +1566,7 @@ id adjust_width
 id alertTitle
 id all
 id always
+id assist
 id async
 id auto
 id barrier
@@ -1577,6 +1588,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id champion
 id chatRoomFragment
 id chatView
 id checkRoomButton
@@ -1596,6 +1608,7 @@ id custom
 id customPanel
 id dark
 id dataBinding
+id death
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -1632,6 +1645,7 @@ id filled
 id fixed
 id forever
 id fragment
+id gameduration
 id ghost_view
 id glide_custom_view_target_tag
 id gold
@@ -1656,6 +1670,9 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id kda
+id kill
+id killspring
 id labeled
 id largeLabel
 id layoutHead
@@ -1841,6 +1858,7 @@ id visible
 id waiting
 id wide
 id win
+id winlose
 id withText
 id wrap
 id wrap_content

@@ -1,82 +1,82 @@
 [
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chat_room.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_chat_room.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_update_password.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_update_password.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_message_sent.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\item_message_sent.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/nav_header.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/nav_header.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_search_waiting.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_search_waiting.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/hojin_2.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/hojin_2.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\hojin_1.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\hojin_1.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_room_history.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_room_history.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_message_sent.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/item_message_sent.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\nav_header.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_verify_phone.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_verify_phone.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\hojin_2.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\hojin_2.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_search_waiting.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_search_waiting.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\activity_register.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_game_history.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_game_history.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\room_list.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\room_list.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_chat_room.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_chat_room.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_game_history.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_game_history.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_profile.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_profile.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/hojin_1.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/hojin_1.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_reset_password.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/activity_reset_password.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_verify_phone.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_verify_phone.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_update_email.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_update_email.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_message_received.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\item_message_received.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_room_history.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_room_history.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_update_email.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_update_email.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_register.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_home.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\activity_home.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_reset_password.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\activity_reset_password.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/room_list.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/room_list.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_update_password.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_update_password.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_message_received.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/item_message_received.xml"
     },
     {
-        "merged": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_history.xml",
-        "source": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\src\\main\\res\\layout\\fragment_history.xml"
+        "merged": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_history.xml",
+        "source": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/src/main/res/layout/fragment_history.xml"
     }
 ]

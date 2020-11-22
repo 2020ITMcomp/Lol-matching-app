@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Seung kyu Hong\\Desktop\\test\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
+            "outputFile": "/Users/Jeon/content/Programming_Android/Lol-matching-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Seung kyu Hong\\.gradle\\caches\\transforms-2\\files-2.1\\407a2836b8ae1616e4a7552af73bb631\\appcompat-1.0.2\\res\\values-v25\\values-v25.xml",
+                    "source": "/Users/Jeon/.gradle/caches/transforms-2/files-2.1/407a2836b8ae1616e4a7552af73bb631/appcompat-1.0.2/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",
