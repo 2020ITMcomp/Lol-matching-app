@@ -86,8 +86,7 @@ class SearchWaiting : Fragment() {
                 "roomId" to roomId
             )
             // Navigate to chatRoom
-            // TODO : Navigation에 action 추가해서, waiting fragment -> chat fragment 로 옮기는 것 작성
-//            Navigation.findNavController(binding.root).navigate(R.id.a, bundle)
+            Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
         }.addOnFailureListener { e ->
             Log.w("createNewRoom", "Can not create a new room!", e)
         }

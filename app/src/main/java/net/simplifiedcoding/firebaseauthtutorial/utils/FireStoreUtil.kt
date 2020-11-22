@@ -25,8 +25,12 @@ fun getMatchingRoomListRef(summonerLane: Int, partnerLane: Int): Task<QuerySnaps
     return db.collection("rooms")
         .whereEqualTo("summonerLane", summonerLane)
         .whereEqualTo("partnerLane", partnerLane).get()
-
 }
+
+fun getUserNicknameRef(uid : String) : Task<DocumentSnapshot> {
+    return db.collection("users").document(uid).get()
+}
+
 
 fun addRoomToUser(uid : String, roomId : String){
 
@@ -65,4 +69,16 @@ fun addNewRoom(uid : String, summonerLane : Int, partnerLane : Int): Task<Docume
     )
 
     return db.collection("rooms").add(room)
+}
+
+fun userRenewalHistory(uid : String){
+    val nicknameRef = getUserNicknameRef(uid)
+    nicknameRef.addOnSuccessListener {
+        val update = hashMapOf(
+            "nickname" to it.data!!.get("nickname").toString()
+        )
+
+        db.collection("update").document(uid).set(update)
+    }
+
 }

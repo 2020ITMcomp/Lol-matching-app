@@ -15,6 +15,9 @@
         <action
                 android:id="@+id/action_homeFragment_to_searchWaiting"
                 app:destination="@id/searchWaiting" />
+        <action
+                android:id="@+id/action_homeFragment_to_matchHistory"
+                app:destination="@id/matchHistory" />
     </fragment>
 
     <fragment android:id="@+id/profileFragment"
@@ -62,4 +65,9 @@
                 android:id="@+id/action_searchWaiting_to_chatRoomFragment"
                 app:destination="@id/chatRoomFragment" />
     </fragment>
+    <fragment
+            android:id="@+id/matchHistory"
+            android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.MatchHistory"
+            android:label="fragment_match_history"
+            tools:layout="@layout/fragment_match_history" />
 </navigation>

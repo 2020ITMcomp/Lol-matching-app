@@ -3,7 +3,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.fragments.GameHistory">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.fragments.MatchHistory">
 
 
     <LinearLayout
@@ -153,9 +154,12 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+<!--    여기에 Drawlayout 설치하자-->
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -165,12 +169,37 @@
                 android:gravity="center_horizontal"
                 android:textAlignment="center"
                 />
+
     </LinearLayout>
 
-    <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/historyView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="36dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:stackFromEnd="true" />
+
+        <Button
+                android:id="@+id/renewalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="152dp"
+                android:text="전적갱신"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- TODO: Update blank fragment layout -->
 

@@ -63,7 +63,9 @@ class HomeFragment : Fragment() {
         binding.searchRoomButton.setOnClickListener {
             dialogBuilder()
         }
-
+        binding.gameHistoryButton.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_matchHistory)
+        }
 
 
         return binding.root

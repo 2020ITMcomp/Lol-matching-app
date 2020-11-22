@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:id="@+id/Linear_total"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
+
+            <LinearLayout
+                    android:id="@+id/Linear_first"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/red"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/winlose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="승"
+                        android:textColor="#FAFAD2"
+                        android:textSize="15dp" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="---"
+                        android:textColor="#FAFAD2" />
+
+                <TextView
+                        android:id="@+id/gameduration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="게임길이"
+                        android:textColor="#FAFAD2"
+                        android:textSize="7dp" />
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@+id/champion"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/image" />
+
+
+            <LinearLayout
+                    android:id="@+id/Linear_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                <LinearLayout
+                        android:id="@+id/Linear_second_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/kill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kill" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:text="/" />
+
+                    <TextView
+                            android:id="@+id/death"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="death"
+                            android:textColor="@color/red" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:text="/" />
+
+                    <TextView
+                            android:id="@+id/assist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="assist" />
+
+                    <!--                        android:fontFamily="@font/NanumBarunGothicBold"-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/Linear_second_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/kda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="kda"
+
+                            android:textSize="11dp" />
+                    <!--                android:fontFamily="@font/NanumBarunGothic"-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/Linear_second_third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp" />
+                    <!--                android:background="@raw/s1"-->
+
+                    <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="3dp" />
+                    <!--                android:background="@raw/s1"-->
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/Linear_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="레벨 18"
+
+                        android:textSize="11dp" />
+                <!--            android:fontFamily="@font/NanumBarunGothic"-->
+                <TextView
+                        android:id="@+id/cs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="197(8.6)CS"
+
+                        android:textSize="11dp" />
+                <!--            android:fontFamily="@font/NanumBarunGothic"-->
+                <TextView
+                        android:id="@+id/gold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="13980G"
+                        android:textColor="@color/gold"
+
+                        android:textSize="11dp" />
+                <!--            android:fontFamily="@font/NanumBarunGothic"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/gameTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2020.11.20"
+                        android:textSize="9dp" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="랭크게임"
+                        android:textSize="10dp" />
+
+                <TextView
+                        android:id="@+id/killspring"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/round_rectangular"
+
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="더블킬"
+
+
+                        android:textColor="@color/red" />
+                <!--            android:fontFamily="@font/NanumBarunGothic"-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>
