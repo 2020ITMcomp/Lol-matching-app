@@ -57,5 +57,9 @@
             android:id="@+id/searchWaiting"
             android:name="net.simplifiedcoding.firebaseauthtutorial.ui.fragments.SearchWaiting"
             android:label="fragment_search_waiting"
-            tools:layout="@layout/fragment_search_waiting" />
+            tools:layout="@layout/fragment_search_waiting" >
+        <action
+                android:id="@+id/action_searchWaiting_to_chatRoomFragment"
+                app:destination="@id/chatRoomFragment" />
+    </fragment>
 </navigation>
