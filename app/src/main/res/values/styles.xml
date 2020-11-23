@@ -12,4 +12,25 @@
 
     </style>
 
+    <style name="infotextSize">
+        <item name="android:textSize">10dp</item>
+    </style>
+
+        <!--  레이아웃  -->
+
+    <style name="typeLayout" parent="infotextSize">
+        <item name="android:layout_width">47dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="kdaLayout" parent="infotextSize">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="winrateLayout" parent="infotextSize">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>
