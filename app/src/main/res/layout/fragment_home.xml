@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -8,25 +8,31 @@
 
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:id="@+id/linearLayout"
+            android:layout_width="411dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="236dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
                 android:id="@+id/createRoomButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:src="@drawable/ic_phone"
-                android:layout_gravity="center"/>
+                android:src="@drawable/ic_phone" />
 
         <Button
                 android:id="@+id/checkRoomButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="History"
-                android:layout_gravity="center"/>
+                android:text="History" />
 
         <Button
                 android:id="@+id/searchRoomButton"
@@ -39,20 +45,40 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="56dp"
             android:orientation="horizontal"
-            android:layout_gravity="">
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+                android:id="@+id/summonerNickname"
+                android:layout_width="222dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:hint="소환사의 이름을 입력하세요"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/matchHistoryButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
         <Button
-                android:id="@+id/gameHistoryButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/matchHistoryButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_marginEnd="52dp"
+                android:layout_marginRight="52dp"
                 android:layout_weight="1"
-                android:text="GameHistory"
-                />
+                android:text="검색"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

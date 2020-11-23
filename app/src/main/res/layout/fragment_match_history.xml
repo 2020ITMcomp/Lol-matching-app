@@ -56,7 +56,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/name" />
 
             <TextView
-                    android:id="@+id/totalWinRate"
+                    android:id="@+id/winrateTotal"
                     android:layout_width="66dp"
                     android:layout_height="26dp"
                     android:layout_marginTop="8dp"
@@ -68,7 +68,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/level" />
 
             <TextView
-                    android:id="@+id/totalKDA"
+                    android:id="@+id/KDA_Total"
                     android:layout_width="66dp"
                     android:layout_height="26dp"
                     android:layout_marginStart="70dp"
@@ -102,15 +102,18 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
                 <TextView
+                        android:id="@+id/typeT"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="공격적"/>
                 <TextView
+                        android:id="@+id/winrateT"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=' / 승률'/>
                 <TextView
+                        android:id="@+id/KDA_T"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text='10%'/>
@@ -126,15 +129,18 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
                 <TextView
+                        android:id="@+id/typeM"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="공격적"/>
                 <TextView
+                        android:id="@+id/winrateM"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=' / 승률'/>
                 <TextView
+                        android:id="@+id/KDA_M"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text='10%'/>
@@ -150,15 +156,18 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
                 <TextView
+                        android:id="@+id/typeJ"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="공격적"/>
                 <TextView
+                        android:id="@+id/winrateJ"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=' / 승률'/>
                 <TextView
+                        android:id="@+id/KDAJ"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text='10%'/>
@@ -174,15 +183,18 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
                 <TextView
+                        android:id="@+id/typeB"
                         android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="공격적"/>
                 <TextView
+                        android:id="@+id/winrateB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=' / 승률'/>
                 <TextView
+                        android:id="@+id/KDAB"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text='10%'/>
