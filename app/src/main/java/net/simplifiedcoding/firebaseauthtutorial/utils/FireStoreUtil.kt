@@ -35,6 +35,9 @@ fun getSummonerInfoRef(nickname : String): DocumentReference {
     return db.collection("summoner").document(nickname)
 }
 
+fun getSummonerGamedataRef(nickname : String): CollectionReference {
+    return db.collection("game").document(nickname).collection("gamedata")
+}
 
 //-------------------------------------------------------------------------------------------------------------------
 

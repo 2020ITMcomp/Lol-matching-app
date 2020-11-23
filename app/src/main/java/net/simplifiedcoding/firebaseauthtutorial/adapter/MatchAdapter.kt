@@ -24,19 +24,29 @@ class MatchHolder(private val match: Match) : BindableItem<ItemMatchBinding>() {
     }
 
     override fun bind(viewBinding: ItemMatchBinding, position: Int) {
-        viewBinding.winlose.text = match.winlose.toString()
-        viewBinding.gameduration.text = match.gameDuration.toString()
-//        viewBinding.champion = match.champion.toString() // TODO : 챔피언 이미지를 다운받아서 넣어줘야함
-        viewBinding.kill.text = match.kill.toString()
+
+//        viewBinding.champion = match.championId // 이건 이미지 넣어야함
+        match.spell1Id
+        match.spell2Id
+        if(match.win)viewBinding.winlose.text = "승"
+        else viewBinding.winlose.text = "패"
+        viewBinding.level.text = "Level : " + match.champLevel.toString()
+        viewBinding.kill.text = match.kills.toString()
         viewBinding.death.text = match.death.toString()
         viewBinding.assist.text = match.assist.toString()
-//    val kda : Double,
-        viewBinding.level.text = match.level.toString()
-        viewBinding.cs.text = match.cs.toString()
-        viewBinding.gold.text = match.gold.toString()
-//        viewBinding. = match.firstSpell.toString()
-//        viewBinding. = match.secondSpell.toString()
-        viewBinding.killspring.text = match.killSpring.toString()
-        viewBinding.gameTime.text = match.timeStamp.toString()
+
+        val check = 100000F
+        if(match.kda.equals(check))viewBinding.kda.text = "Infinity"
+        else viewBinding.kda.text = match.kda.toString()
+        viewBinding.cs.text = "CS : " + match.cs.toString()
+        viewBinding.gold.text = "Gold : " + match.goldEarned.toString()
+//        if(match.killSpring.equals(Long(2))){
+//
+//        }
+        viewBinding.killspring.text = "더블킬" // 임시
+        val min = match.gameDuration.div(60)
+        val second = match.gameDuration.rem(60)
+        viewBinding.gameduration.text = " 게임시간 " + min.toString() + "분 " + second.toString() +"초" // 시간으로 수정해야함
+        viewBinding.gameTime.text = match.gameCreation.toString()
     }
 }

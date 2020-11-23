@@ -18,6 +18,7 @@ import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentMatchHistoryBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.RoomListBinding
 import java.text.SimpleDateFormat
+import kotlin.math.roundToInt
 
 
 fun summonerAdapt(binding: FragmentMatchHistoryBinding, summonerInfo: SummonerInfo) {
@@ -29,14 +30,31 @@ fun summonerAdapt(binding: FragmentMatchHistoryBinding, summonerInfo: SummonerIn
     binding.typeM.text = summonerInfo.typeM
     binding.typeJ.text = summonerInfo.typeJ
     binding.typeT.text = summonerInfo.typeT
-    binding.winrateB.text = summonerInfo.winrateB
-    binding.winrateM.text = summonerInfo.winrateM
-    binding.winrateJ.text = summonerInfo.winrateJ
-    binding.winrateT.text = summonerInfo.winrateT
-    binding.KDAB.text = summonerInfo.KDA_B
-    binding.KDAM.text = summonerInfo.KDA_M
-    binding.KDAJ.text = summonerInfo.KDA_J
-    binding.KDAT.text = summonerInfo.KDA_T
-    binding.KDATotal.text = summonerInfo.KDA_Total
-    binding.winrateTotal.text = summonerInfo.winrateTotal
+
+    val winrateB = (summonerInfo.winrateB * 1000).roundToInt() / 10f
+    val winrateM = (summonerInfo.winrateM * 1000).roundToInt() / 10f
+    val winrateJ = (summonerInfo.winrateJ * 1000).roundToInt() / 10f
+    val winrateT = (summonerInfo.winrateT * 1000).roundToInt() / 10f
+    val winrateTotal = (summonerInfo.winrateTotal * 1000).roundToInt() / 10f
+
+    binding.winrateB.text = winrateB.toString() + "%"
+    binding.winrateM.text = winrateM.toString() + "%"
+    binding.winrateJ.text = winrateJ.toString() + "%"
+    binding.winrateT.text = winrateT.toString() + "%"
+    binding.winrateTotal.text = winrateTotal.toString() + "%"
+
+    val KDAB = (summonerInfo.KDA_B * 100).roundToInt() / 100f
+    val KDAM = (summonerInfo.KDA_M * 100).roundToInt() / 100f
+    val KDAJ = (summonerInfo.KDA_J * 100).roundToInt() / 100f
+    val KDAT = (summonerInfo.KDA_T * 100).roundToInt() / 100f
+    val KDATotal = (summonerInfo.KDA_Total * 100).roundToInt() / 100f
+
+    binding.KDAB.text = KDAB.toString()
+    binding.KDAM.text = KDAM.toString()
+    binding.KDAJ.text = KDAJ.toString()
+    binding.KDAT.text = KDAT.toString()
+    binding.KDATotal.text = KDATotal.toString()
+
+
+
 }

@@ -6,4 +6,5 @@
     <string name="wating_comment">Waiting...</string>
     <string name="message_hint">Input Message</string>
     <string name="send_button">Send</string>
+    <string name="infoTextSize">10dp</string>
 </resources>
