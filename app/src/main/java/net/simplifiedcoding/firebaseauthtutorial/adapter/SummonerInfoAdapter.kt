@@ -25,7 +25,7 @@ fun summonerAdapt(binding: FragmentMatchHistoryBinding, summonerInfo: SummonerIn
     binding.name
 
     binding.name.text = summonerInfo.nickname
-    binding.level.text = summonerInfo.level
+    binding.level.text = summonerInfo.level.toString()
     binding.typeB.text = summonerInfo.typeB
     binding.typeM.text = summonerInfo.typeM
     binding.typeJ.text = summonerInfo.typeJ

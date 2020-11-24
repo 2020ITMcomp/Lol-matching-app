@@ -21,7 +21,7 @@ class SendMessageItem(private val message: Message) : BindableItem<ItemMessageSe
     }
 }
 
-class ReceiveMessageItem(private val message: Message, val context: Context?) : BindableItem<ItemMessageReceivedBinding>() {
+class ReceiveMessageItem(private val message: Message, val context: Context?,val nickname:String) : BindableItem<ItemMessageReceivedBinding>() {
 
     override fun getLayout(): Int {
         return R.layout.item_message_received
@@ -31,16 +31,12 @@ class ReceiveMessageItem(private val message: Message, val context: Context?) : 
         viewBinding.textMessageBody.text = message.text_message_body
         viewBinding.textMessageName.text = message.text_message_name
         viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
-
-
-
-
         viewBinding.imageMessageProfile.setOnClickListener {view ->
 
 
             if (context != null) {
 
-                CDialog(context).show()
+                CDialog(context,nickname = nickname).show()
 
             }
 
@@ -50,11 +46,14 @@ class ReceiveMessageItem(private val message: Message, val context: Context?) : 
 }
 
 class CDialog
-    constructor(context: Context) : Dialog(context){
+
+    constructor(context: Context,nickname: String) : Dialog(context){
+
 
 
     init {
-        getSummonerInfoRef("Hide on bush").get().addOnSuccessListener { info ->
+
+        getSummonerInfoRef(nickname).get().addOnSuccessListener { info ->
             SummonerInfo(
                 nickname = info.get("name").toString(),
                 level = info.get("summonerLevel") as Long,
@@ -93,27 +92,6 @@ class CDialog
         }
         setCanceledOnTouchOutside(true)
 
-
-
-        /*
-        findViewById<TextView>(R.id.name).text = match.result?.get("name").toString()
-        findViewById<TextView>(R.id.level).text = match.result?.get("level").toString()
-        findViewById<TextView>(R.id.bottomkda).text = match.result?.get("B_KDA").toString()
-        findViewById<TextView>(R.id.topkda).text = match.result?.get("T_KDA").toString()
-        findViewById<TextView>(R.id.junglekda).text = match.result?.get("J_KDA").toString()
-        findViewById<TextView>(R.id.middlekda).text = match.result?.get("M_KDA").toString()
-        findViewById<TextView>(R.id.topwinrate).text = match.result?.get("T_Win").toString()
-        findViewById<TextView>(R.id.junglewinrate).text = match.result?.get("J_Win").toString()
-        findViewById<TextView>(R.id.middlewinrate).text = match.result?.get("M_Win").toString()
-        findViewById<TextView>(R.id.bottomwinrate).text = match.result?.get("B_Win").toString()
-        findViewById<TextView>(R.id.topfeature).text = match.result?.get("T_Feature").toString()
-        findViewById<TextView>(R.id.junglefeature).text = match.result?.get("J_Feature").toString()
-        findViewById<TextView>(R.id.middlefeature).text = match.result?.get("M_Feature").toString()
-        findViewById<TextView>(R.id.bottomfeature).text = match.result?.get("B_Feature").toString()
-        findViewById<TextView>(R.id.totalKDA).text = match.result?.get("Total_KDA").toString()
-        findViewById<TextView>(R.id.totalWinRate).text = match.result?.get("Total_Win").toString()
-
-         */
         setContentView(R.layout.user_dialog)
 
     }

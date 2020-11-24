@@ -32,7 +32,7 @@ class ChatRoomFragment : Fragment() {
     private lateinit var uid : String
     private lateinit var roomMessageRef : CollectionReference
     private val messageAdapter = GroupAdapter<GroupieViewHolder>()
-
+    private lateinit var nickname : String
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,7 +43,7 @@ class ChatRoomFragment : Fragment() {
         db = FirebaseFirestore.getInstance()
         recyclerView = binding.chatView
         recyclerView.adapter = messageAdapter
-
+        nickname = arguments!!.get("nickname").toString()
         val roomId = arguments!!.getString("roomId")
         val mUser = FirebaseAuth.getInstance().currentUser
         uid = mUser!!.uid
@@ -98,7 +98,7 @@ class ChatRoomFragment : Fragment() {
                     if(uid.equals(messageUid)){
                         messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
                     }else{
-                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context))
+                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context,nickname))
                     }
                 }
             }.addOnFailureListener { e ->
