@@ -63,8 +63,13 @@ class HomeFragment : Fragment() {
         binding.searchRoomButton.setOnClickListener {
             dialogBuilder()
         }
-        binding.gameHistoryButton.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_matchHistory)
+        binding.matchHistoryButton.setOnClickListener {
+
+            // TODO : 소환사 이름을 입력한 것이 없다면 누를 수 없도록
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_matchHistory,
+                bundleOf(
+                    "nickname" to binding.summonerNickname.text
+                ))
         }
 
 

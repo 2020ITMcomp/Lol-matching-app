@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -9,23 +9,26 @@
 
     <LinearLayout
             android:id="@+id/userAbstract"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="125dp"
-            android:layout_marginBottom="500dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
 
         <ImageView
                 android:id="@+id/profileicon"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="114dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight='1'
                 android:background="@drawable/image" />
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/nameAndRate"
                 android:layout_width="136dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="4"
                 android:orientation="vertical">
 
@@ -37,6 +40,7 @@
                     android:layout_weight='2'
                     android:gravity="center_vertical"
                     android:text="하계동 맘스터치"
+                    android:textAlignment="center"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +60,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/name" />
 
             <TextView
-                    android:id="@+id/totalWinRate"
+                    android:id="@+id/winrateTotal"
                     android:layout_width="66dp"
                     android:layout_height="26dp"
                     android:layout_marginTop="8dp"
@@ -68,7 +72,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/level" />
 
             <TextView
-                    android:id="@+id/totalKDA"
+                    android:id="@+id/KDA_Total"
                     android:layout_width="66dp"
                     android:layout_height="26dp"
                     android:layout_marginStart="70dp"
@@ -79,113 +83,128 @@
                     android:text="KDA : 3.14"
                     android:textAlignment="center"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/totalWinRate"
                     app:layout_constraintTop_toBottomOf="@+id/level" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
             <LinearLayout
 
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
                 <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
+
                 <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="공격적"/>
+                        android:id="@+id/typeT"
+                        style="@style/typeLayout"
+                        android:text="공격적" />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=' / 승률'/>
+                        android:id="@+id/winrateT"
+                        style="@style/winrateLayout"
+                        android:text=' / 승률' />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='10%'/>
+                        android:id="@+id/KDA_T"
+                        style="@style/kdaLayout"
+                        android:text='10%' />
             </LinearLayout>
+
             <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
                 <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
+
                 <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="공격적"/>
+                        android:id="@+id/typeM"
+                        style="@style/typeLayout"
+                        android:text="Offensive" />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=' / 승률'/>
+                        android:id="@+id/winrateM"
+                        style="@style/winrateLayout"
+                        android:text=' / 승률' />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='10%'/>
+                        android:id="@+id/KDA_M"
+                        style="@style/kdaLayout"
+                        android:text='10%' />
             </LinearLayout>
+
             <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
                 <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
+
                 <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="공격적"/>
+                        android:id="@+id/typeJ"
+                        style="@style/typeLayout"
+                        android:text="공격적" />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=' / 승률'/>
+                        android:id="@+id/winrateJ"
+                        style="@style/winrateLayout"
+                        android:text=' / 승률' />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='10%'/>
+                        android:id="@+id/KDAJ"
+                        style="@style/kdaLayout"
+                        android:text='10%' />
             </LinearLayout>
+
             <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
                 <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_phone" />
+
                 <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="공격적"/>
+                        android:id="@+id/typeB"
+                        style="@style/typeLayout"
+                        android:text="공격적" />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=' / 승률'/>
+                        android:id="@+id/winrateB"
+                        style="@style/winrateLayout"
+                        android:text=' / 승률' />
+
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text='10%'/>
+                        android:id="@+id/KDAB"
+                        style="@style/kdaLayout"
+                        android:text='10%' />
             </LinearLayout>
 
         </LinearLayout>
@@ -193,49 +212,63 @@
     </LinearLayout>
 
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text='최근경기'
-                android:layout_marginTop="125dp"
-                android:textSize="20dp"
-                android:gravity="center_horizontal"
-                android:textAlignment="center"
-                />
-
-    </LinearLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="501dp">
+            android:layout_height="530dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userAbstract">
 
-
-        <Button
-                android:id="@+id/renewalButton"
-                android:layout_width="wrap_content"
+        <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="152dp"
-                android:text="전적갱신"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text='최근경기'
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/renewalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="갱신"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </LinearLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/historyView"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_marginTop="152dp"
+                android:layout_height="462dp"
+                android:layout_marginTop="16dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
                 app:stackFromEnd="true" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- TODO: Update blank fragment layout -->
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
