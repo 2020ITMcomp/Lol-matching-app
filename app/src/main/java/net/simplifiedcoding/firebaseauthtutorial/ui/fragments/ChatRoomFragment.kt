@@ -21,6 +21,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import net.simplifiedcoding.firebaseauthtutorial.adapter.ReceiveMessageItem
+import net.simplifiedcoding.firebaseauthtutorial.utils.getRoomRef
 import net.simplifiedcoding.firebaseauthtutorial.utils.snapshotToMessage
 
 
@@ -33,6 +34,7 @@ class ChatRoomFragment : Fragment() {
     private lateinit var roomMessageRef : CollectionReference
     private val messageAdapter = GroupAdapter<GroupieViewHolder>()
     private lateinit var nickname : String
+    private lateinit var roomId : String
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,8 +45,9 @@ class ChatRoomFragment : Fragment() {
         db = FirebaseFirestore.getInstance()
         recyclerView = binding.chatView
         recyclerView.adapter = messageAdapter
-        nickname = arguments!!.get("nickname").toString()
-        val roomId = arguments!!.getString("roomId")
+        roomId = arguments!!.getString("roomId")
+//        nickname = arguments!!.get("nickname").toString()
+
         val mUser = FirebaseAuth.getInstance().currentUser
         uid = mUser!!.uid
         roomMessageRef = getRoomMessageRef(roomId)
@@ -57,7 +60,9 @@ class ChatRoomFragment : Fragment() {
                 uid = uid,
                 text_message_body = binding.messageText.text.toString(),
                 text_message_name = "TEMP",
-                timeStamp = System.currentTimeMillis() + 32_400_000) // 시차 9시간 적용
+//                timeStamp = System.currentTimeMillis() + 32_400_000) // 시차 9시간 적용
+                timeStamp = System.currentTimeMillis())
+
 
             roomMessageRef.add(message)
                 .addOnSuccessListener {
@@ -88,17 +93,26 @@ class ChatRoomFragment : Fragment() {
 
     private fun populateData() {
 
+        // TODO : messageref에서 얻는 거는, 시간 반대순으로 띄워줘야한다.
+
         val messages = roomMessageRef.get()
             .addOnSuccessListener { messages ->
                 for(message in messages){
-
-                    // TODO : 일단 논리는 제대로 작성해놨는데, 확인을 제대로 못해서 오류가 날 확률이 높음.
                     val messageUid : String = message.getString("uid")!!
 
                     if(uid.equals(messageUid)){
                         messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
                     }else{
-                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context,nickname))
+
+                        getRoomRef(roomId).get().addOnSuccessListener {
+                            var nickname : String
+
+                            if(uid.equals(it.get("createUser")))nickname = it.get("enteredUserNickname").toString()
+                            else nickname = it.get("createUserNickname").toString()
+
+                            messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context, nickname))
+                        }
+
                     }
                 }
             }.addOnFailureListener { e ->

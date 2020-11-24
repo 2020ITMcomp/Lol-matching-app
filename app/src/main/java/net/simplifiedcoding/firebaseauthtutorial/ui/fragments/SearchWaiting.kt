@@ -32,6 +32,7 @@ class SearchWaiting : Fragment() {
 
     private lateinit var binding : FragmentSearchWaitingBinding
     private lateinit var mUser : FirebaseUser
+    private lateinit var nickname : String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +47,7 @@ class SearchWaiting : Fragment() {
 
         val summonerLane = arguments!!.getInt("summonerLane")
         val partnerLane = arguments!!.getInt("partnerLane")
+        nickname = arguments!!.getString("nickname").toString()
 
         canMatch(summonerLane, partnerLane)
 
@@ -67,8 +69,20 @@ class SearchWaiting : Fragment() {
 
         var ref = getMatchingRoomListRef(partnerLane, summonerLane).addOnSuccessListener {
             if(it.size() > 0){ // 매칭되는 방이 있는 것
-                it.forEach { room ->
-//                    Log.d(TAG, room.toString())
+                it.forEach { room -> // TODO : 여기서 매칭 알고리즘 적용해야함
+                    room.apply {
+                        val update = hashMapOf(
+                            "enteredUser" to mUser.uid,
+                            "enteredUserNickname" to nickname,
+                            "isClosed" to true
+                        )
+                        reference.update(update)
+
+                        var bundle = bundleOf(
+                            "roomId" to room.id
+                        )
+                        Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+                    }
 
                 }
             }else{ // 맞는 방이 없을 경우.
@@ -78,22 +92,18 @@ class SearchWaiting : Fragment() {
     }
 
     private fun createRoom(summonerLane: Int, partnerLane: Int){
-        addNewRoom(mUser.uid, summonerLane, partnerLane).addOnSuccessListener { documentReference ->
+        addNewRoom(mUser.uid, nickname, summonerLane, partnerLane).addOnSuccessListener { documentReference ->
             Log.d("createNewRoom", "Successfully created the room : ${documentReference.id}")
             val roomId = documentReference.id
-            addRoomToUser(mUser.uid, roomId)
+            addRoomToUser(mUser.uid, nickname, roomId)
+
+            var bundle = bundleOf(
+                "roomId" to roomId
+            )
+            // Navigate to chatRoom
+            Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
 
 
-            // 닉네임 받아서 방으로 넘기기
-            getUserNicknameRef(mUser.uid).addOnSuccessListener {
-                var bundle = bundleOf(
-                    "roomId" to roomId,
-                    "nickname" to it.get("nickname").toString()
-                )
-                // Navigate to chatRoom
-                Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
-
-            }
 
         }.addOnFailureListener { e ->
             Log.w("createNewRoom", "Can not create a new room!", e)

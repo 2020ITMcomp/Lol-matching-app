@@ -21,6 +21,10 @@ fun getRoomListRef(uid : String): CollectionReference {
     return db.collection("users").document(uid).collection("enteredRoom")
 }
 
+fun getRoomRef(roomId: String): DocumentReference {
+    return db.collection("rooms").document(roomId)
+}
+
 fun getMatchingRoomListRef(summonerLane: Int, partnerLane: Int): Task<QuerySnapshot> {
     return db.collection("rooms")
         .whereEqualTo("summonerLane", summonerLane)
@@ -42,10 +46,11 @@ fun getSummonerGamedataRef(nickname : String): CollectionReference {
 //-------------------------------------------------------------------------------------------------------------------
 
 
-fun addRoomToUser(uid : String, roomId : String){
+fun addRoomToUser(uid : String, nickname: String, roomId : String){
 
     val room = hashMapOf( // 추가적으로 데이터가 필요한지는 생각해봐야 할 듯.
-        "roomId" to roomId
+        "roomId" to roomId,
+        "userNickname" to nickname
     )
 
     val userRef = db.collection("users").document(uid)
@@ -68,10 +73,11 @@ fun snapshotToMessage(snapshot: QueryDocumentSnapshot) : Message{
     )
 }
 
-fun addNewRoom(uid : String, summonerLane : Int, partnerLane : Int): Task<DocumentReference> {
+fun addNewRoom(uid : String, nickname: String, summonerLane : Int, partnerLane : Int): Task<DocumentReference> {
     var roomId : String
     val room = hashMapOf(
         "createUser" to uid,
+        "createUserNickname" to nickname,
         "summonerLane" to summonerLane,
         "partnerLane" to partnerLane,
         "timeStamp" to System.currentTimeMillis().toString(),
