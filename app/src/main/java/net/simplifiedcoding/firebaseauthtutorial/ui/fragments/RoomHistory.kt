@@ -19,6 +19,7 @@ import net.simplifiedcoding.firebaseauthtutorial.adapter.RoomHolder
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentRoomHistoryBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.getRoomListRef
+import java.text.SimpleDateFormat
 
 
 class RoomHistory : Fragment() {
@@ -27,7 +28,7 @@ class RoomHistory : Fragment() {
     private lateinit var db : FirebaseFirestore
     private lateinit var mUser : FirebaseUser
     private lateinit var recyclerView: RecyclerView
-    private val messageAdapter = GroupAdapter<GroupieViewHolder>()
+    private val roomAdapter = GroupAdapter<GroupieViewHolder>()
     private lateinit var uid : String
 
     override fun onCreateView(
@@ -42,11 +43,11 @@ class RoomHistory : Fragment() {
 
         recyclerView = binding.roomList.apply {
             setHasFixedSize(true)
-            adapter = messageAdapter
+            adapter = roomAdapter
         }
 
         setList() // TODO : 나중에 livedata를 적용해서 하는 방법을 찾아볼까.
-        messageAdapter.clear()
+        roomAdapter.clear()
 
         return binding.root
     }
@@ -55,9 +56,9 @@ class RoomHistory : Fragment() {
         getRoomListRef(uid).get().addOnSuccessListener { rooms ->
             for(room in rooms){
                 val roomId = room.getString("roomId")!!
-
-                val room = Room(roomId = roomId, roomName = roomId) //roomId로 Name을 설정한 것은 임시
-                messageAdapter.add(RoomHolder(room))
+                val roomT = Room(roomId = roomId, roomName = "TEMP",
+                    timeStamp = SimpleDateFormat("yyyy년 MM월 dd일, HH:mm").format(System.currentTimeMillis())) //roomId로 Name을 설정한 것은 임시
+                roomAdapter.add(RoomHolder(roomT))
             }
         }.addOnFailureListener { e ->
             Log.w(TAG, "Error ref to FireStore about RoomList", e)

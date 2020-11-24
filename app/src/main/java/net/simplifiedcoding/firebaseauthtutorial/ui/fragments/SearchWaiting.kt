@@ -52,9 +52,6 @@ class SearchWaiting : Fragment() {
         canMatch(summonerLane, partnerLane)
 
 
-        matchingStart()
-
-
 
 
 
@@ -77,6 +74,7 @@ class SearchWaiting : Fragment() {
                             "isClosed" to true
                         )
                         reference.update(update)
+                        addRoomToUser(mUser.uid, nickname, room.id)
 
                         var bundle = bundleOf(
                             "roomId" to room.id
@@ -108,25 +106,6 @@ class SearchWaiting : Fragment() {
         }.addOnFailureListener { e ->
             Log.w("createNewRoom", "Can not create a new room!", e)
         }
-
-    }
-
-    private fun matchingStart() {
-
-//        val roomRef = db.collection("rooms").get()
-//            .addOnSuccessListener { documents ->
-//                for(document in documents){
-//                    // TODO : 여기서 매칭 데이터에 맞는 방을 찾아야 한다.
-//                    if (document != null) {
-//                        //Log.d('d', "DocumentSnapshot data: ${document.data}")
-//                    } else {
-//                        //Log.d(TAG, "No such document")
-//                    }
-//                }
-//
-//            }.addOnFailureListener { e ->
-//                //Log.w(TAG, "DB room reference ERROR")
-//            }
 
     }
 
