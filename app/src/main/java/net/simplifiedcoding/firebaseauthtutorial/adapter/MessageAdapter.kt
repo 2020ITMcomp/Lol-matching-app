@@ -31,6 +31,10 @@ class ReceiveMessageItem(private val message: Message, val context: Context?,val
         viewBinding.textMessageBody.text = message.text_message_body
         viewBinding.textMessageName.text = message.text_message_name
         viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
+
+
+
+
         viewBinding.imageMessageProfile.setOnClickListener {view ->
 
 
@@ -46,33 +50,14 @@ class ReceiveMessageItem(private val message: Message, val context: Context?,val
 }
 
 class CDialog
-
-    constructor(context: Context,nickname: String) : Dialog(context){
-
+constructor(context: Context,nickname: String) : Dialog(context){
 
 
     init {
 
         getSummonerInfoRef(nickname).get().addOnSuccessListener { info ->
-            SummonerInfo(
-                nickname = info.get("name").toString(),
-                level = info.get("summonerLevel") as Long,
-                typeB = info.get("B_Feature").toString(),
-                typeJ = info.get("J_Feature").toString(),
-                typeM = info.get("M_Feature").toString(),
-                typeT = info.get("T_Feature").toString(),
-                winrateB = info.get("B_Win") as Double,
-                winrateJ = info.get("J_Win") as Double,
-                winrateM = info.get("M_Win") as Double,
-                winrateT = info.get("T_Win") as Double,
-                KDA_B = info.get("B_KDA") as Double,
-                KDA_J = info.get("J_KDA") as Double,
-                KDA_M = info.get("M_KDA") as Double,
-                KDA_T = info.get("T_KDA") as Double,
-                KDA_Total = info.get("T_KDA") as Double,
-                winrateTotal = info.get("T_Win") as Double
 
-            )
+            // TODO : 서포터 추가
             findViewById<TextView>(R.id.name).text = info.get("name").toString()
             findViewById<TextView>(R.id.level).text = info.get("summonerLevel").toString()
             findViewById<TextView>(R.id.bottomkda).text = info.get("B_KDA").toString()

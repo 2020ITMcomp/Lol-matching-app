@@ -10,7 +10,7 @@
     <LinearLayout
             android:id="@+id/userAbstract"
             android:layout_width="match_parent"
-            android:layout_height="125dp"
+            android:layout_height="150dp"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -36,7 +36,7 @@
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="30dp"
                     android:layout_weight='2'
                     android:gravity="center_vertical"
                     android:text="하계동 맘스터치"
@@ -44,7 +44,8 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
 
             <TextView
                     android:id="@+id/level"
@@ -207,6 +208,35 @@
                         android:text='10%' />
             </LinearLayout>
 
+            <LinearLayout
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_phone" />
+
+                <TextView
+                        android:id="@+id/typeS"
+                        style="@style/typeLayout"
+                        android:text="공격적" />
+
+                <TextView
+                        android:id="@+id/winrateS"
+                        style="@style/winrateLayout"
+                        android:text=' / 승률' />
+
+                <TextView
+                        android:id="@+id/KDA_S"
+                        style="@style/kdaLayout"
+                        android:text='10%' />
+            </LinearLayout>
+
+
         </LinearLayout>
 
     </LinearLayout>
@@ -256,7 +286,7 @@
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/historyView"
                 android:layout_width="match_parent"
-                android:layout_height="462dp"
+                android:layout_height="432dp"
                 android:layout_marginTop="16dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
