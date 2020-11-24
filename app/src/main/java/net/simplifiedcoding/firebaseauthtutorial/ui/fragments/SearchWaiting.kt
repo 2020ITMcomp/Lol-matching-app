@@ -16,16 +16,16 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.target.ViewTarget
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_search_waiting.view.*
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentSearchWaitingBinding
-import net.simplifiedcoding.firebaseauthtutorial.utils.addNewRoom
-import net.simplifiedcoding.firebaseauthtutorial.utils.addRoomToUser
-import net.simplifiedcoding.firebaseauthtutorial.utils.getMatchingRoomListRef
+import net.simplifiedcoding.firebaseauthtutorial.utils.*
 
 
 class SearchWaiting : Fragment() {
@@ -69,6 +69,7 @@ class SearchWaiting : Fragment() {
             if(it.size() > 0){ // 매칭되는 방이 있는 것
                 it.forEach { room ->
 //                    Log.d(TAG, room.toString())
+
                 }
             }else{ // 맞는 방이 없을 경우.
                 createRoom(summonerLane, partnerLane)
@@ -82,11 +83,18 @@ class SearchWaiting : Fragment() {
             val roomId = documentReference.id
             addRoomToUser(mUser.uid, roomId)
 
-            var bundle = bundleOf(
-                "roomId" to roomId
-            )
-            // Navigate to chatRoom
-            Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+
+            // 닉네임 받아서 방으로 넘기기
+            getUserNicknameRef(mUser.uid).addOnSuccessListener {
+                var bundle = bundleOf(
+                    "roomId" to roomId,
+                    "nickname" to it.get("nickname").toString()
+                )
+                // Navigate to chatRoom
+                Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+
+            }
+
         }.addOnFailureListener { e ->
             Log.w("createNewRoom", "Can not create a new room!", e)
         }
