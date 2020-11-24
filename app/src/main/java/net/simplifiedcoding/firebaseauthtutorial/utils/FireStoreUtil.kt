@@ -31,8 +31,8 @@ fun getUserNicknameRef(uid : String) : Task<DocumentSnapshot> {
     return db.collection("users").document(uid).get()
 }
 
-fun getSummonerInfoRef(nickname : String): Task<QuerySnapshot> {
-    return db.collection(nickname).get()
+fun getSummonerInfoRef(nickname : String): DocumentReference {
+    return db.collection("summoner").document(nickname)
 }
 
 

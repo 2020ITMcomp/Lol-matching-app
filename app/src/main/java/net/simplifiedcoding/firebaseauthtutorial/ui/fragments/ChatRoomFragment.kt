@@ -6,29 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
-import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
 import net.simplifiedcoding.firebaseauthtutorial.adapter.SendMessageItem
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentChatRoomBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.getRoomMessageRef
-import java.sql.Time
-import java.sql.Timestamp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import net.simplifiedcoding.firebaseauthtutorial.adapter.ReceiveMessageItem
 import net.simplifiedcoding.firebaseauthtutorial.utils.snapshotToMessage
-import java.text.SimpleDateFormat
 
 
 class ChatRoomFragment : Fragment() {
@@ -102,7 +95,7 @@ class ChatRoomFragment : Fragment() {
                     if(uid.equals(messageUid)){
                         messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
                     }else{
-                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message)))
+                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context))
                     }
                 }
             }.addOnFailureListener { e ->

@@ -60,7 +60,7 @@ class MatchHistory : Fragment() {
             getUserNicknameRef(uid).addOnSuccessListener {
 //                it.
                 // 최종적으로 받은 다음에
-                this.
+
             }.addOnFailureListener {
                 // TODO 돌아가게 하기
             }
