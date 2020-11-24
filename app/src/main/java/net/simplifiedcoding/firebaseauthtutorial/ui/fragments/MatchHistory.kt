@@ -123,7 +123,7 @@ class MatchHistory : Fragment() {
                 val cs = cs1 + cs2 + cs3
 
                 val goldEarned= gameStat.get("goldEarned") as Long
-                val killSpring= gameStat.get("killingSprees") as Long
+                val killSpring= gameStat.get("largestMultiKill") as Long
 
                 // 데이터 작업 끝 !
 

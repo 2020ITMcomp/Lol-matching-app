@@ -60,8 +60,11 @@ class ChatRoomFragment : Fragment() {
 
         binding.sendButton.setOnClickListener {
 
-            val message = Message(uid = uid, text_message_body = binding.messageText.text.toString(),
-                text_message_name = "TEMP", timeStamp = System.currentTimeMillis() + 32_400_000) // 시차 9시간 적용
+            val message = Message(
+                uid = uid,
+                text_message_body = binding.messageText.text.toString(),
+                text_message_name = "TEMP",
+                timeStamp = System.currentTimeMillis() + 32_400_000) // 시차 9시간 적용
 
             roomMessageRef.add(message)
                 .addOnSuccessListener {
