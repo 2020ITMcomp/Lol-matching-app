@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
@@ -95,29 +96,25 @@ class ChatRoomFragment : Fragment() {
 
         // TODO : messageref에서 얻는 거는, 시간 반대순으로 띄워줘야한다.
 
-        val messages = roomMessageRef.get()
-            .addOnSuccessListener { messages ->
-                for(message in messages){
-                    val messageUid : String = message.getString("uid")!!
+        getRoomRef(roomId).get().addOnSuccessListener {room ->
 
-                    if(uid.equals(messageUid)){
+            roomMessageRef.orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { messages ->
+                for(message in messages){
+
+                    if(uid.equals((message.getString("uid")))){
                         messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
                     }else{
+                        var nickname : String
 
-                        getRoomRef(roomId).get().addOnSuccessListener {
-                            var nickname : String
+                        if(uid.equals(room.get("createUser")))nickname = room.get("enteredUserNickname").toString()
+                        else nickname = room.get("createUserNickname").toString()
 
-                            if(uid.equals(it.get("createUser")))nickname = it.get("enteredUserNickname").toString()
-                            else nickname = it.get("createUserNickname").toString()
-
-                            messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context, nickname))
-                        }
-
+                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context, nickname))
                     }
                 }
-            }.addOnFailureListener { e ->
-                Log.w(Companion.TAG, "Error adding document", e)
             }
+        }
+
 
 
     }
