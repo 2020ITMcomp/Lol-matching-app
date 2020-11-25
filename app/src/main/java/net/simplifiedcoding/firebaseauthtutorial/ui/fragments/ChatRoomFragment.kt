@@ -110,6 +110,6 @@ class ChatRoomFragment : Fragment() {
 
     companion object {
         private const val TAG = "ChatRoomFragment TEST"
-    }
 
+    }
 }
