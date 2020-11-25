@@ -23,7 +23,7 @@ class RoomHolder(private val room: Room) : BindableItem<RoomListBinding>() {
     }
 
     override fun bind(viewBinding: RoomListBinding, position: Int) {
-        viewBinding.roomDescription.text = room.roomName
+        viewBinding.roomDescription.text = room.timeStamp
         // TODO : room.roomId를 어떻게 사용할지 정하기
         // TODO : roomName을 어떻게 적용할지도 정하기
         viewBinding.roomDescription.setOnClickListener {

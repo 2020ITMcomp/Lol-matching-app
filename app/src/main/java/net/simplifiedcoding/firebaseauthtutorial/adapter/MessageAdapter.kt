@@ -29,25 +29,23 @@ class ReceiveMessageItem(private val message: Message, val context: Context?,val
 
     override fun bind(viewBinding: ItemMessageReceivedBinding, position: Int) {
         viewBinding.textMessageBody.text = message.text_message_body
-        viewBinding.textMessageName.text = message.text_message_name
+        viewBinding.textMessageName.text = nickname
         viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
 
 
 
 
         viewBinding.imageMessageProfile.setOnClickListener {view ->
-
-
             if (context != null) {
 
                 CDialog(context,nickname = nickname).show()
-
             }
 
         }
     }
 
 }
+
 
 class CDialog
 constructor(context: Context,nickname: String) : Dialog(context){
@@ -64,16 +62,20 @@ constructor(context: Context,nickname: String) : Dialog(context){
             findViewById<TextView>(R.id.topkda).text = info.get("T_KDA").toString()
             findViewById<TextView>(R.id.junglekda).text = info.get("J_KDA").toString()
             findViewById<TextView>(R.id.middlekda).text = info.get("M_KDA").toString()
-            findViewById<TextView>(R.id.topwinrate).text = info.get("T_Win").toString()
-            findViewById<TextView>(R.id.junglewinrate).text = info.get("J_Win").toString()
-            findViewById<TextView>(R.id.middlewinrate).text = info.get("M_Win").toString()
-            findViewById<TextView>(R.id.bottomwinrate).text = info.get("B_Win").toString()
+            findViewById<TextView>(R.id.supportkda).text = info.get("S_KDA").toString()
+            findViewById<TextView>(R.id.topwinrate).text = (info.get("T_Win") as Double).times(100).toString() + "%"
+            findViewById<TextView>(R.id.junglewinrate).text = (info.get("J_Win") as Double).times(100).toString() + "%"
+            findViewById<TextView>(R.id.middlewinrate).text = (info.get("M_Win")as Double).times(100).toString() + "%"
+            findViewById<TextView>(R.id.bottomwinrate).text = (info.get("B_Win")as Double).times(100).toString() + "%"
+            findViewById<TextView>(R.id.supportwinrate).text = (info.get("S_Win")as Double).times(100).toString() + "%"
+            findViewById<TextView>(R.id.totalWinRate).text = (info.get("Total_Win") as Double).times(100).toString() + "%"
             findViewById<TextView>(R.id.topfeature).text = info.get("T_Feature").toString()
             findViewById<TextView>(R.id.junglefeature).text = info.get("J_Feature").toString()
             findViewById<TextView>(R.id.middlefeature).text = info.get("M_Feature").toString()
             findViewById<TextView>(R.id.bottomfeature).text = info.get("B_Feature").toString()
+            findViewById<TextView>(R.id.supportfeature).text = info.get("S_Feature").toString()
             findViewById<TextView>(R.id.totalKDA).text = info.get("Total_KDA").toString()
-            findViewById<TextView>(R.id.totalWinRate).text = info.get("Total_Win").toString()
+
         }
         setCanceledOnTouchOutside(true)
 

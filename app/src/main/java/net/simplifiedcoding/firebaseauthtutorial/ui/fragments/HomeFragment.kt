@@ -22,6 +22,7 @@ import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.addNewRoom
 import net.simplifiedcoding.firebaseauthtutorial.utils.addRoomToUser
+import net.simplifiedcoding.firebaseauthtutorial.utils.getUserNicknameRef
 
 
 class HomeFragment : Fragment() {
@@ -108,12 +109,18 @@ class HomeFragment : Fragment() {
                 DialogInterface.OnClickListener { dialog, id ->
                     // 라인 선택이 완료 된 후에, lane에 대한 데이터를 넘겨주고 -> Navigation
                     if(partnerLane == -1)return@OnClickListener
-                    val bundle = bundleOf(
-                        "summonerLane" to summonerLane,
-                        "partnerLane" to partnerLane
-                    )
-                    Log.d(TAG, bundle.toString())
-                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting, bundle)
+
+                    getUserNicknameRef(mUser.uid).addOnSuccessListener {
+                        var bundle = bundleOf(
+                            "summonerLane" to summonerLane,
+                            "partnerLane" to partnerLane,
+                            "nickname" to it.get("nickname").toString()
+                        )
+                        Log.d(TAG, bundle.toString())
+                        Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting, bundle)
+                    }
+
+
 
                 })
             .setNegativeButton("Cancel",
