@@ -9,6 +9,7 @@ import com.google.firebase.firestore.*
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
 import net.simplifiedcoding.firebaseauthtutorial.ui.fragments.HomeFragment
+import java.text.SimpleDateFormat
 
 
 val db = FirebaseFirestore.getInstance()
@@ -50,7 +51,8 @@ fun addRoomToUser(uid : String, nickname: String, roomId : String){
 
     val room = hashMapOf( // 추가적으로 데이터가 필요한지는 생각해봐야 할 듯.
         "roomId" to roomId,
-        "userNickname" to nickname
+        "userNickname" to nickname,
+        "timeStamp" to SimpleDateFormat("yyyy년 MM월 dd일, HH:mm").format(System.currentTimeMillis())
     )
 
     val userRef = db.collection("users").document(uid)

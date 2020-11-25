@@ -54,7 +54,7 @@
             tools:layout="@layout/fragment_room_history" >
         <action
                 android:id="@+id/action_roomHistory_to_chatRoomFragment"
-                app:destination="@id/chatRoomFragment" />0
+                app:destination="@id/chatRoomFragment" />
     </fragment>
     <fragment
             android:id="@+id/searchWaiting"

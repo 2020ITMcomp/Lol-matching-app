@@ -55,9 +55,12 @@ class RoomHistory : Fragment() {
     private fun setList() {
         getRoomListRef(uid).get().addOnSuccessListener { rooms ->
             for(room in rooms){
-                val roomId = room.getString("roomId")!!
-                val roomT = Room(roomId = roomId, roomName = "TEMP",
-                    timeStamp = SimpleDateFormat("yyyy년 MM월 dd일, HH:mm").format(System.currentTimeMillis())) //roomId로 Name을 설정한 것은 임시
+
+                val roomT = Room(
+                    roomId = room.getString("roomId")!!,
+                    roomName = "TEMP",
+                    timeStamp = room.getString("timeStamp")!!
+                )//roomId로 Name을 설정한 것은 임시
                 roomAdapter.add(RoomHolder(roomT))
             }
         }.addOnFailureListener { e ->

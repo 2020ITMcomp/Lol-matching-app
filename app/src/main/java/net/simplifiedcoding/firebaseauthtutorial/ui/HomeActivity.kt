@@ -80,15 +80,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val count = supportFragmentManager.backStackEntryCount
-        if (count==0) {
-            super.onBackPressed()
-        } else {
-            supportFragmentManager.popBackStack()
-        }
-    }
+
 
 
 
