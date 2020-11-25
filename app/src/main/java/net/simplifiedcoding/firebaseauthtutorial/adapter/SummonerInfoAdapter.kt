@@ -32,11 +32,11 @@ fun summonerAdapt(binding: FragmentMatchHistoryBinding, summonerInfo: SummonerIn
     binding.typeS.text = summonerInfo.typeS
 
     binding.winrateB.text = summonerInfo.winrateB.times(100).toString() + "%"
-    binding.winrateM.text = summonerInfo.winrateB.times(100).toString() + "%"
-    binding.winrateJ.text = summonerInfo.winrateB.times(100).toString() + "%"
-    binding.winrateT.text = summonerInfo.winrateB.times(100).toString() + "%"
-    binding.winrateS.text = summonerInfo.winrateB.times(100).toString() + "%"
-    binding.winrateTotal.text = summonerInfo.winrateB.times(100).toString() + "%"
+    binding.winrateM.text = summonerInfo.winrateM.times(100).toString() + "%"
+    binding.winrateJ.text = summonerInfo.winrateJ.times(100).toString() + "%"
+    binding.winrateT.text = summonerInfo.winrateT.times(100).toString() + "%"
+    binding.winrateS.text = summonerInfo.winrateS.times(100).toString() + "%"
+    binding.winrateTotal.text = summonerInfo.winrateTotal.times(100).toString() + "%"
 
     binding.KDAB.text = summonerInfo.KDA_B.toString()
     binding.KDAM.text = summonerInfo.KDA_M.toString()
