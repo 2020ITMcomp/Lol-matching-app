@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Match
@@ -156,31 +159,32 @@ class MatchHistory : Fragment() {
 
             getSummonerInfoRef(nickname).get().addOnSuccessListener { info ->
 
-                val summonerInfo = SummonerInfo(
-                    nickname = info.get("name").toString(),
-                    level = info.get("summonerLevel") as Long,
-                    typeB = info.get("B_Feature").toString(),
-                    typeM = info.get("M_Feature").toString(),
-                    typeJ = info.get("J_Feature").toString(),
-                    typeT = info.get("T_Feature").toString(),
-                    typeS = info.get("S_Feature").toString(),
-                    winrateB = info.get("B_Win") as Double,
-                    winrateM = info.get("M_Win") as Double,
-                    winrateJ = info.get("J_Win") as Double,
-                    winrateT = info.get("T_Win") as Double,
-                    winrateS = info.get("S_Win") as Double,
-                    KDA_B = info.get("B_KDA") as Double,
-                    KDA_M = info.get("M_KDA") as Double,
-                    KDA_J = info.get("J_KDA") as Double,
-                    KDA_T = info.get("T_KDA") as Double,
-                    KDA_S = info.get("S_KDA") as Double,
-                    KDA_Total = info.get("Total_KDA") as Double,
-                    winrateTotal = info.get("Total_Win") as Double
-                )
+                Firebase.storage.reference.child("Tier/${info.get("tier").toString()}.png").downloadUrl.addOnSuccessListener { uri ->
+                    Picasso.get().load(uri).into(binding.profileicon)
+                    binding.name.text = info.get("name").toString()
+                    binding.level.text = info.get("summonerLevel").toString()
+                    binding.typeB.text = info.get("B_Feature").toString()
+                    binding.typeM.text = info.get("M_Feature").toString()
+                    binding.typeJ.text = info.get("J_Feature").toString()
+                    binding.typeT.text = info.get("T_Feature").toString()
+                    binding.typeS.text = info.get("S_Feature").toString()
 
-                Log.d(TAG, summonerInfo.toString())
+                    binding.winrateB.text = (info.get("B_Win")as Double).times(100).toString() + "%"
+                    binding.winrateM.text = (info.get("M_Win")as Double).times(100).toString() + "%"
+                    binding.winrateJ.text = (info.get("J_Win")as Double).times(100).toString() + "%"
+                    binding.winrateT.text = (info.get("T_Win")as Double).times(100).toString() + "%"
+                    binding.winrateS.text = (info.get("S_Win")as Double).times(100).toString() + "%"
+                    binding.winrateTotal.text = (info.get("Total_Win")as Double).times(100).toString() + "%"
 
-                summonerAdapt(this, summonerInfo)
+                    binding.KDAB.text = info.get("B_KDA").toString()
+                    binding.KDAM.text = info.get("M_KDA").toString()
+                    binding.KDAJ.text = info.get("J_KDA").toString()
+                    binding.KDAT.text = info.get("T_KDA").toString()
+                    binding.KDAS.text = info.get("S_KDA").toString()
+                    binding.KDATotal.text = info.get("Total_KDA").toString()
+                }
+
+
             }
 
         }

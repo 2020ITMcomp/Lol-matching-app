@@ -18,11 +18,11 @@
 
         <ImageView
                 android:id="@+id/profileicon"
-                android:layout_width="114dp"
+                android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:layout_gravity="center_vertical"
                 android:layout_weight='1'
-                android:background="@drawable/image" />
+                android:layout_marginLeft="30dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/nameAndRate"
