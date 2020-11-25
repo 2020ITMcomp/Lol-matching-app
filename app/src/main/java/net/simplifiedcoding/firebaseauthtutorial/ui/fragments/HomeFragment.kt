@@ -42,22 +42,7 @@ class HomeFragment : Fragment() {
 
         //Log.d(TAG, mUser.displayName) TODO : 일단은 사용자의 닉네임을 입력하도록 해야한다.
 
-        binding.createRoomButton.setOnClickListener{
 
-//            addNewRoom(mUser.uid).addOnSuccessListener { documentReference ->
-//                Log.d("createNewRoom", "Successfully created the room : ${documentReference.id}")
-//                val roomId = documentReference.id
-//                addRoomToUser(mUser.uid, roomId)
-//
-//                var bundle = bundleOf(
-//                    "roomId" to roomId
-//                )
-//                // Navigate to chatRoom
-//                Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_chatRoomFragment, bundle)
-//            }.addOnFailureListener { e ->
-//                Log.w("createNewRoom", "Can not create a new room!", e)
-//            }
-        }
         binding.checkRoomButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
         }
