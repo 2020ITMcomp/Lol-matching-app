@@ -10,18 +10,29 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+        <Button
+                android:id="@+id/chatout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/logout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/chatView"
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
-                android:layout_marginTop="32dp"
+                android:layout_height="583dp"
                 android:scrollbars="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:stackFromEnd="true"
                 app:layout_constraintBottom_toTopOf="@+id/messageText"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.633"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintVertical_bias="0.934"
+                app:stackFromEnd="true" />
 
         <EditText
                 android:id="@+id/messageText"
@@ -29,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="64dp"
                 android:layout_marginLeft="64dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="10dp"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="@string/message_hint"
@@ -42,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="10dp"
                 android:text="@string/send_button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -97,3 +97,9 @@ fun userRenewalHistory(uid : String){
 
 }
 
+//----------------------------------------------------------------------------------------
+
+fun deleteRoomFromUser(uid : String, roomId : String){
+    db.collection("users").document(uid).collection("enteredRoom").document(roomId).delete()
+}
+
