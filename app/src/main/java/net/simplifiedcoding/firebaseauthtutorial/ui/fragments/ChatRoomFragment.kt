@@ -16,15 +16,13 @@ import com.xwray.groupie.GroupieViewHolder
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
 import net.simplifiedcoding.firebaseauthtutorial.adapter.SendMessageItem
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentChatRoomBinding
-import net.simplifiedcoding.firebaseauthtutorial.utils.getRoomMessageRef
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import net.simplifiedcoding.firebaseauthtutorial.adapter.AlarmMessageItem
 import net.simplifiedcoding.firebaseauthtutorial.adapter.ReceiveMessageItem
-import net.simplifiedcoding.firebaseauthtutorial.utils.getRoomRef
-import net.simplifiedcoding.firebaseauthtutorial.utils.snapshotToMessage
+import net.simplifiedcoding.firebaseauthtutorial.utils.*
 
 
 class ChatRoomFragment : Fragment() {
@@ -80,7 +78,30 @@ class ChatRoomFragment : Fragment() {
             receiveAutoResponse()
         }
 
+        binding.chatout.setOnClickListener {
+            android.app.AlertDialog.Builder(this.context).apply {
+                setTitle("듀오 종료")
+                setPositiveButton("네") {_, _ ->
+                    outChatRoom()
+                }
+                setNegativeButton("아니요") {_, _ ->
+                }
+            }.create().show()
+        }
+
         return binding.root
+    }
+
+    private fun outChatRoom(){
+        val ref = getRoomRef(roomId)
+        ref.get().addOnSuccessListener { room ->
+            val userId1 = room.get("createUser").toString()
+            val userId2 = room.get("enteredUser").toString()
+            deleteRoomFromUser(userId1, roomId)
+            deleteRoomFromUser(userId2, roomId)
+        }
+        ref.delete()
+
     }
 
     private fun receiveAutoResponse() {

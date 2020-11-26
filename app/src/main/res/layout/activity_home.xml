@@ -13,11 +13,39 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-<!--        <androidx.appcompat.widget.Toolbar-->
+
+        <!--        <androidx.appcompat.widget.Toolbar-->
 <!--                android:background="?colorPrimary"-->
 <!--                android:id="@+id/toolbar"-->
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="wrap_content"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="드루와 v1"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/logout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/logout"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/logout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <fragment
                 android:name="androidx.navigation.fragment.NavHostFragment"

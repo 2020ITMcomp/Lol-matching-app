@@ -66,18 +66,7 @@ class HomeFragment : Fragment() {
                     "nickname" to binding.summonerNickname.text
                 ))
         }
-        binding.logout.setOnClickListener {
-            AlertDialog.Builder(this.context).apply {
-                setTitle("로그아웃")
-                setPositiveButton("네") {_, _ ->
-                    FirebaseAuth.getInstance().signOut()
 
-
-                }
-                setNegativeButton("아니요") {_, _ ->
-                }
-            }.create().show()
-        }
 
 
         return binding.root
@@ -85,7 +74,7 @@ class HomeFragment : Fragment() {
 
     private fun dialogBuilder(){
         var summonerBuilder = AlertDialog.Builder(context)
-            .setTitle("CHoice Your Lane")
+            .setTitle("Choice Your Lane")
             .setSingleChoiceItems(R.array.lane, -1,
                 DialogInterface.OnClickListener { dialogInterface, i ->
                     summonerLane = i
@@ -116,17 +105,13 @@ class HomeFragment : Fragment() {
                     // 라인 선택이 완료 된 후에, lane에 대한 데이터를 넘겨주고 -> Navigation
                     if(partnerLane == -1)return@OnClickListener
 
-                    getUserNicknameRef(mUser.uid).addOnSuccessListener {
-                        var bundle = bundleOf(
-                            "summonerLane" to summonerLane,
-                            "partnerLane" to partnerLane,
-                            "nickname" to it.get("nickname").toString()
-                        )
-                        Log.d(TAG, bundle.toString())
-                        Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting, bundle)
-                    }
-
-
+                    var bundle = bundleOf(
+                        "summonerLane" to summonerLane,
+                        "partnerLane" to partnerLane,
+                        "nickname" to nickname
+                    )
+                    Log.d(TAG, bundle.toString())
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_searchWaiting, bundle)
 
                 })
             .setNegativeButton("Cancel",
@@ -143,19 +128,12 @@ class HomeFragment : Fragment() {
                 Firebase.storage.reference.child("Tier/${info.get("tier").toString()}.png").downloadUrl.addOnSuccessListener { uri ->
                     Picasso.get().load(uri).into(binding.tiericon)
                     binding.summonernickname.text = info.get("name").toString()
-                    //binding.level.text = info.get("summonerLevel").toString()
-                    //binding.typeB.text = info.get("B_Feature").toString()
-                    //binding.typeM.text = info.get("M_Feature").toString()
-                    //binding.typeJ.text = info.get("J_Feature").toString()
-                    //binding.typeT.text = info.get("T_Feature").toString()
-                    //binding.typeS.text = info.get("S_Feature").toString()
                     binding.summonertier.text = info.get("tier").toString()
                     binding.bottomwinrate.text = (info.get("B_Win")as Double).times(100).toString() + "%"
                     binding.middlewinrate.text = (info.get("M_Win")as Double).times(100).toString() + "%"
                     binding.junglewinrate.text = (info.get("J_Win")as Double).times(100).toString() + "%"
                     binding.topwinrate.text = (info.get("T_Win")as Double).times(100).toString() + "%"
                     binding.supportwinrate.text = (info.get("S_Win")as Double).times(100).toString() + "%"
-                    //binding.winrateTotal.text = (info.get("Total_Win")as Double).times(100).toString() + "%"
 
                     binding.bottomkda.text = info.get("B_KDA").toString()
                     binding.middlekda.text = info.get("M_KDA").toString()
