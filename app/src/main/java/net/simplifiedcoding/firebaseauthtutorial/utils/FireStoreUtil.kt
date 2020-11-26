@@ -30,7 +30,9 @@ fun getRoomRef(roomId: String): DocumentReference {
 fun getMatchingRoomListRef(summonerLane: Long, partnerLane: Long): Task<QuerySnapshot> {
     return db.collection("rooms")
         .whereEqualTo("summonerLane", summonerLane)
-        .whereEqualTo("partnerLane", partnerLane).get()
+        .whereEqualTo("partnerLane", partnerLane)
+        .whereEqualTo("isClosed", false)
+        .get()
 }
 
 fun getUserNicknameRef(uid : String) : Task<DocumentSnapshot> {
