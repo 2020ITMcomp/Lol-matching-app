@@ -56,12 +56,13 @@ class RoomHistory : Fragment() {
         getRoomListRef(uid).get().addOnSuccessListener { rooms ->
             for(room in rooms){
 
-                val roomT = Room(
+                val roomObj = Room(
                     roomId = room.getString("roomId")!!,
-                    roomName = "TEMP",
-                    timeStamp = room.getString("timeStamp")!!
+                    timeStamp = room.getString("timeStamp")!!,
+                    summonerLane = room.getLong("summonerLane")!!,
+                    partnerLane = room.getLong("partnerLane")!!
                 )//roomId로 Name을 설정한 것은 임시
-                roomAdapter.add(RoomHolder(roomT))
+                roomAdapter.add(RoomHolder(roomObj))
             }
         }.addOnFailureListener { e ->
             Log.w(TAG, "Error ref to FireStore about RoomList", e)

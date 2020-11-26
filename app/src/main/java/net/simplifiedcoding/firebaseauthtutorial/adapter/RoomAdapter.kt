@@ -23,15 +23,31 @@ class RoomHolder(private val room: Room) : BindableItem<RoomListBinding>() {
     }
 
     override fun bind(viewBinding: RoomListBinding, position: Int) {
-        viewBinding.roomDescription.text = room.timeStamp
-        // TODO : room.roomId를 어떻게 사용할지 정하기
-        // TODO : roomName을 어떻게 적용할지도 정하기
+        val roomName = room.timeStamp + " " + laneInterpretation(room.summonerLane) + " : " + laneInterpretation(room.partnerLane) + " 듀오"
+
+        viewBinding.roomDescription.text = roomName
         viewBinding.roomDescription.setOnClickListener {
-            Log.d("RoomList Binding Test", "제대로 눌렸다!")
             var bundle = bundleOf(
                 "roomId" to room.roomId
             )
             viewBinding.root.findNavController().navigate(R.id.action_roomHistory_to_chatRoomFragment, bundle)
+        }
+    }
+
+    fun laneInterpretation(lane : Long) : String{
+
+        return if(lane.equals(0L)){
+            "탑"
+        }else if(lane.equals(1L)){
+            "정글"
+        }else if(lane.equals(2L)){
+            "미드"
+        }else if(lane.equals(3L)){
+            "원딜"
+        }else if(lane.equals(4L)){
+            "서포터"
+        }else{
+            "None"
         }
     }
 //

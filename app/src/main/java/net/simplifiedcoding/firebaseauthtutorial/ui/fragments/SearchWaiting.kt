@@ -24,9 +24,11 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_search_waiting.view.*
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
+import net.simplifiedcoding.firebaseauthtutorial.adapter.Room
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentSearchWaitingBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.*
+import java.text.SimpleDateFormat
 
 
 class SearchWaiting : Fragment() {
@@ -46,53 +48,49 @@ class SearchWaiting : Fragment() {
         val image:ImageView = binding.root.waiting
         Glide.with(this).asGif().load(R.raw.image).into(image)
 
-        val summonerLane = arguments!!.getInt("summonerLane")
-        val partnerLane = arguments!!.getInt("partnerLane")
+        val summonerLane = arguments!!.getLong("summonerLane")
+        val partnerLane = arguments!!.getLong("partnerLane")
         nickname = arguments!!.getString("nickname").toString()
 
         canMatch(summonerLane, partnerLane)
-
-
-
-
-
-
-
 
         return binding.root
 
     }
 
-    private fun canMatch(summonerLane : Int, partnerLane : Int){
+    private fun canMatch(summonerLane : Long, partnerLane : Long){
 
-        var ref = getMatchingRoomListRef(partnerLane, summonerLane).addOnSuccessListener {
-            if(it.size() > 0){ // 매칭되는 방이 있는 것
-                it.forEach { room -> // TODO : 여기서 매칭 알고리즘 적용해야함
-                    room.apply {
-                        val update = hashMapOf(
+        getMatchingRoomListRef(partnerLane, summonerLane).addOnSuccessListener {rooms ->
+            if(rooms.size() > 0){ // 매칭되는 방이 있는 것
+                rooms.forEach { room -> // TODO : 여기서 매칭 알고리즘 적용해야함
+                    room.reference.update(
+                        hashMapOf(
                             "enteredUser" to mUser.uid,
                             "enteredUserNickname" to nickname,
-                            "isClosed" to true
-                        )
-                        reference.update(update)
-                        addRoomToUser(mUser.uid, nickname, room.id)
+                            "isClosed" to true))
 
-                        var bundle = bundleOf(
-                            "roomId" to room.id,
-                            "nickname" to nickname,
-                            "type" to 1 as Int// enteredUser
-                        )
+                    addRoomToUser(
+                        mUser.uid, Room(
+                            roomId =  room.id,
+                            timeStamp =  SimpleDateFormat("MM월 dd일, HH:mm").format(System.currentTimeMillis()),
+                            summonerLane = summonerLane,
+                            partnerLane = partnerLane))
 
-                        val message = Message(
-                            uid = "alarm",
-                            text_message_body = "${nickname}님이 입장하였습니다.",
-                            text_message_name = nickname,
-                            timeStamp = System.currentTimeMillis())
+                    val message = Message(
+                        uid = "alarm",
+                        text_message_body = "${nickname}님이 입장하였습니다.",
+                        text_message_name = nickname,
+                        timeStamp = System.currentTimeMillis())
+                    var bundle = bundleOf(
+                        "roomId" to room.id,
+                        "nickname" to nickname,
+                        "type" to 1 as Int// enteredUser
+                    )
 
-                        getRoomMessageRef(room.id).add(message).addOnSuccessListener {
-                            Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
-                        }
+                    getRoomMessageRef(room.id).add(message).addOnSuccessListener {
+                        Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
                     }
+
 
                 }
             }else{ // 맞는 방이 없을 경우.
@@ -101,23 +99,28 @@ class SearchWaiting : Fragment() {
         }
     }
 
-    private fun createRoom(summonerLane: Int, partnerLane: Int){
+    private fun createRoom(summonerLane: Long, partnerLane: Long){
         addNewRoom(mUser.uid, nickname, summonerLane, partnerLane).addOnSuccessListener { documentReference ->
             Log.d("createNewRoom", "Successfully created the room : ${documentReference.id}")
             val roomId = documentReference.id
-            addRoomToUser(mUser.uid, nickname, roomId)
-
-            var bundle = bundleOf(
-                "roomId" to roomId,
-                "nickname" to nickname,
-                "type" to 0 // createUser
-            )
+            addRoomToUser(
+                mUser.uid, Room(
+                    roomId =  roomId,
+                    timeStamp =  SimpleDateFormat("MM월 dd일, HH:mm").format(System.currentTimeMillis()),
+                    summonerLane = summonerLane,
+                    partnerLane = partnerLane
+                ))
 
             val message = Message(
                 uid = "alarm",
                 text_message_body = "${nickname}님이 입장하였습니다.",
                 text_message_name = nickname,
                 timeStamp = System.currentTimeMillis())
+            var bundle = bundleOf(
+                "roomId" to roomId,
+                "nickname" to nickname,
+                "type" to 0 // createUser
+            )
 
             getRoomMessageRef(roomId).add(message).addOnSuccessListener {
                 Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)

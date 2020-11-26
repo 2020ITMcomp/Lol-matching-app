@@ -8,6 +8,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.*
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
+import net.simplifiedcoding.firebaseauthtutorial.adapter.Room
 import net.simplifiedcoding.firebaseauthtutorial.ui.fragments.HomeFragment
 import java.text.SimpleDateFormat
 
@@ -26,7 +27,7 @@ fun getRoomRef(roomId: String): DocumentReference {
     return db.collection("rooms").document(roomId)
 }
 
-fun getMatchingRoomListRef(summonerLane: Int, partnerLane: Int): Task<QuerySnapshot> {
+fun getMatchingRoomListRef(summonerLane: Long, partnerLane: Long): Task<QuerySnapshot> {
     return db.collection("rooms")
         .whereEqualTo("summonerLane", summonerLane)
         .whereEqualTo("partnerLane", partnerLane).get()
@@ -47,13 +48,7 @@ fun getSummonerGamedataRef(nickname : String): CollectionReference {
 //-------------------------------------------------------------------------------------------------------------------
 
 
-fun addRoomToUser(uid : String, nickname: String, roomId : String){
-
-    val room = hashMapOf( // 추가적으로 데이터가 필요한지는 생각해봐야 할 듯.
-        "roomId" to roomId,
-        "userNickname" to nickname,
-        "timeStamp" to SimpleDateFormat("yyyy년 MM월 dd일, HH:mm").format(System.currentTimeMillis())
-    )
+fun addRoomToUser(uid : String, room : Room){
 
     val userRef = db.collection("users").document(uid)
         .collection("enteredRoom").add(room)
@@ -63,7 +58,6 @@ fun addRoomToUser(uid : String, nickname: String, roomId : String){
         .addOnFailureListener { e ->
             Log.w("referenceToUser", "Can not adding a room to the user!", e)
         }
-
 }
 
 fun snapshotToMessage(snapshot: QueryDocumentSnapshot) : Message{
@@ -75,7 +69,7 @@ fun snapshotToMessage(snapshot: QueryDocumentSnapshot) : Message{
     )
 }
 
-fun addNewRoom(uid : String, nickname: String, summonerLane : Int, partnerLane : Int): Task<DocumentReference> {
+fun addNewRoom(uid : String, nickname: String, summonerLane : Long, partnerLane : Long): Task<DocumentReference> {
     var roomId : String
     val room = hashMapOf(
         "createUser" to uid,
