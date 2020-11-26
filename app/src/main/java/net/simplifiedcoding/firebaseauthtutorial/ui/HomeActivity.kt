@@ -28,8 +28,18 @@ class HomeActivity : AppCompatActivity() {
         val root = binding.root
         setContentView(root)
 //        setSupportActionBar(toolbar)
-        supportActionBar?.hide()
 
+        binding.logout.setOnClickListener {
+            android.app.AlertDialog.Builder(this).apply {
+                setTitle("로그아웃")
+                setPositiveButton("네") {_, _ ->
+                    FirebaseAuth.getInstance().signOut()
+                    logout()
+                }
+                setNegativeButton("아니요") {_, _ ->
+                }
+            }.create().show()
+        }
 
 
 
