@@ -19,10 +19,12 @@ import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.coroutines.Delay
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
+import net.simplifiedcoding.firebaseauthtutorial.ui.HomeActivity
 import net.simplifiedcoding.firebaseauthtutorial.utils.addNewRoom
 import net.simplifiedcoding.firebaseauthtutorial.utils.addRoomToUser
 import net.simplifiedcoding.firebaseauthtutorial.utils.getSummonerInfoRef
@@ -43,10 +45,13 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         mUser = FirebaseAuth.getInstance().currentUser!!
         db = FirebaseFirestore.getInstance()
-        nickname = arguments!!.get("nickname").toString()
+        getUserNicknameRef(mUser.uid).addOnSuccessListener {info ->
+            nickname = info.get("nickname").toString()
+            InputUserAbstract()
+        }
         //Log.d(TAG, mUser.displayName) TODO : 일단은 사용자의 닉네임을 입력하도록 해야한다.
 
-        InputUserAbstract()
+
         binding.checkRoomButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
         }
@@ -60,6 +65,18 @@ class HomeFragment : Fragment() {
                 bundleOf(
                     "nickname" to binding.summonerNickname.text
                 ))
+        }
+        binding.logout.setOnClickListener {
+            AlertDialog.Builder(this.context).apply {
+                setTitle("로그아웃")
+                setPositiveButton("네") {_, _ ->
+                    FirebaseAuth.getInstance().signOut()
+                    Navigation.findNavController(binding.root).navigate(R.id.action_logout)
+
+                }
+                setNegativeButton("아니요") {_, _ ->
+                }
+            }.create().show()
         }
 
 
@@ -132,7 +149,7 @@ class HomeFragment : Fragment() {
                     //binding.typeJ.text = info.get("J_Feature").toString()
                     //binding.typeT.text = info.get("T_Feature").toString()
                     //binding.typeS.text = info.get("S_Feature").toString()
-
+                    binding.summonertier.text = info.get("tier").toString()
                     binding.bottomwinrate.text = (info.get("B_Win")as Double).times(100).toString() + "%"
                     binding.middlewinrate.text = (info.get("M_Win")as Double).times(100).toString() + "%"
                     binding.junglewinrate.text = (info.get("J_Win")as Double).times(100).toString() + "%"

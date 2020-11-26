@@ -20,9 +20,16 @@
                 android:gravity="center"
                 android:textSize="20dp"
                 android:textStyle="bold"/>
+        <Button
+                android:id="@+id/logout"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/logout"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"/>
         <ImageView
 
-                android:id="@+id/tiericon"
+                android:id="@+id/icon"
                 android:layout_marginTop="50dp"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -33,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@+id/tiericon"
+                android:layout_below="@+id/icon"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
                 android:elevation="20dp"
@@ -82,11 +89,12 @@
                         android:orientation="horizontal">
 
                     <ImageView
+                            android:id="@+id/tiericon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_margin="5dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/top" />
+                            android:background="" />
 
                     <LinearLayout
                             android:layout_width="match_parent"
