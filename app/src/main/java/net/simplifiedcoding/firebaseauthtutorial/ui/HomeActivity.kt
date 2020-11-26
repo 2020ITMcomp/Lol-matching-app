@@ -6,6 +6,7 @@ import android.renderscript.ScriptGroup
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
@@ -26,49 +27,50 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val root = binding.root
         setContentView(root)
-        setSupportActionBar(toolbar)
+//        setSupportActionBar(toolbar)
+        supportActionBar?.hide()
 
 
 
 
-        val navController = Navigation.findNavController(this, R.id.fragment)
-        NavigationUI.setupWithNavController(nav_view, navController)
-        NavigationUI.setupActionBarWithNavController(
-            this,
-            navController, drawer_layout
-        )
+//        val navController = Navigation.findNavController(this, R.id.fragment)
+//        NavigationUI.setupWithNavController(nav_view, navController)
+//        NavigationUI.setupActionBarWithNavController(
+//            this,
+//            navController, drawer_layout
+//        )
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(
-            Navigation.findNavController(this, R.id.fragment),
-            drawer_layout
-        )
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.option_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.action_logout) {
-
-            AlertDialog.Builder(this).apply {
-                setTitle("Are you sure?")
-                setPositiveButton("Yes") { _, _ ->
-
-                    FirebaseAuth.getInstance().signOut()
-                    logout()
-
-                }
-                setNegativeButton("Cancel") { _, _ ->
-                }
-            }.create().show()
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onSupportNavigateUp(): Boolean {
+//        return NavigationUI.navigateUp(
+//            Navigation.findNavController(this, R.id.fragment),
+//            drawer_layout
+//        )
+//    }
+//
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.option_menu, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        if (item?.itemId == R.id.action_logout) {
+//
+//            AlertDialog.Builder(this).apply {
+//                setTitle("Are you sure?")
+//                setPositiveButton("Yes") { _, _ ->
+//
+//                    FirebaseAuth.getInstance().signOut()
+//                    logout()
+//
+//                }
+//                setNegativeButton("Cancel") { _, _ ->
+//                }
+//            }.create().show()
+//
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 
     override fun onBackPressed() {
         super.onBackPressed()
