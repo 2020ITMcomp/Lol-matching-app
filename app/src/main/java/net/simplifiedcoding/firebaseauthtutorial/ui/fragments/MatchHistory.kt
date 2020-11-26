@@ -149,6 +149,9 @@ class MatchHistory : Fragment() {
                 )))
 
             }
+
+            // TODO : for문에 바깥에다가 끝나고 나서 gone 하나 넣어주면 될거 같은데
+
         }
 
     }

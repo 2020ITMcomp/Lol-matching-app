@@ -5,6 +5,7 @@ import android.content.Context
 import android.widget.TextView
 import com.xwray.groupie.databinding.BindableItem
 import net.simplifiedcoding.firebaseauthtutorial.R
+import net.simplifiedcoding.firebaseauthtutorial.databinding.ItemMessageAlarmBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.ItemMessageReceivedBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.ItemMessageSentBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.getSummonerInfoRef
@@ -21,7 +22,18 @@ class SendMessageItem(private val message: Message) : BindableItem<ItemMessageSe
     }
 }
 
-class ReceiveMessageItem(private val message: Message, val context: Context?,val nickname:String) : BindableItem<ItemMessageReceivedBinding>() {
+class AlarmMessageItem(private val message: Message) : BindableItem<ItemMessageAlarmBinding>() {
+    override fun getLayout(): Int {
+        return R.layout.item_message_alarm
+    }
+
+    override fun bind(viewBinding: ItemMessageAlarmBinding, position: Int) {
+        viewBinding.textMessageBody.text = message.text_message_body
+        viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
+    }
+}
+
+class ReceiveMessageItem(private val message: Message, val context: Context?) : BindableItem<ItemMessageReceivedBinding>() {
 
     override fun getLayout(): Int {
         return R.layout.item_message_received
@@ -29,7 +41,7 @@ class ReceiveMessageItem(private val message: Message, val context: Context?,val
 
     override fun bind(viewBinding: ItemMessageReceivedBinding, position: Int) {
         viewBinding.textMessageBody.text = message.text_message_body
-        viewBinding.textMessageName.text = nickname
+        viewBinding.textMessageName.text = message.text_message_name
         viewBinding.textMessageTime.text = SimpleDateFormat("HH:mm").format(message.timeStamp.toLong())
 
 
@@ -38,7 +50,7 @@ class ReceiveMessageItem(private val message: Message, val context: Context?,val
         viewBinding.imageMessageProfile.setOnClickListener {view ->
             if (context != null) {
 
-                CDialog(context,nickname = nickname).show()
+                CDialog(context,nickname = message.text_message_name).show()
             }
 
         }

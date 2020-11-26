@@ -23,6 +23,7 @@ import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_search_waiting.view.*
 import net.simplifiedcoding.firebaseauthtutorial.R
+import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentSearchWaitingBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.*
@@ -77,9 +78,20 @@ class SearchWaiting : Fragment() {
                         addRoomToUser(mUser.uid, nickname, room.id)
 
                         var bundle = bundleOf(
-                            "roomId" to room.id
+                            "roomId" to room.id,
+                            "nickname" to nickname,
+                            "type" to 1 as Int// enteredUser
                         )
-                        Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+
+                        val message = Message(
+                            uid = "alarm",
+                            text_message_body = "${nickname}님이 입장하였습니다.",
+                            text_message_name = nickname,
+                            timeStamp = System.currentTimeMillis())
+
+                        getRoomMessageRef(room.id).add(message).addOnSuccessListener {
+                            Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+                        }
                     }
 
                 }
@@ -96,10 +108,22 @@ class SearchWaiting : Fragment() {
             addRoomToUser(mUser.uid, nickname, roomId)
 
             var bundle = bundleOf(
-                "roomId" to roomId
+                "roomId" to roomId,
+                "nickname" to nickname,
+                "type" to 0 // createUser
             )
+
+            val message = Message(
+                uid = "alarm",
+                text_message_body = "${nickname}님이 입장하였습니다.",
+                text_message_name = nickname,
+                timeStamp = System.currentTimeMillis())
+
+            getRoomMessageRef(roomId).add(message).addOnSuccessListener {
+                Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+            }
             // Navigate to chatRoom
-            Navigation.findNavController(binding.root).navigate(R.id.action_searchWaiting_to_chatRoomFragment, bundle)
+
 
 
 

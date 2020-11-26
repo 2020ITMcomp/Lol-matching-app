@@ -21,6 +21,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import net.simplifiedcoding.firebaseauthtutorial.adapter.AlarmMessageItem
 import net.simplifiedcoding.firebaseauthtutorial.adapter.ReceiveMessageItem
 import net.simplifiedcoding.firebaseauthtutorial.utils.getRoomRef
 import net.simplifiedcoding.firebaseauthtutorial.utils.snapshotToMessage
@@ -31,11 +32,13 @@ class ChatRoomFragment : Fragment() {
     private lateinit var binding : FragmentChatRoomBinding
     private lateinit var db : FirebaseFirestore
     private lateinit var recyclerView : RecyclerView
-    private lateinit var uid : String
     private lateinit var roomMessageRef : CollectionReference
     private val messageAdapter = GroupAdapter<GroupieViewHolder>()
+
     private lateinit var nickname : String
     private lateinit var roomId : String
+    private lateinit var uid : String
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,21 +50,21 @@ class ChatRoomFragment : Fragment() {
         recyclerView = binding.chatView
         recyclerView.adapter = messageAdapter
         roomId = arguments!!.getString("roomId")
-//        nickname = arguments!!.get("nickname").toString()
+        nickname = arguments!!.get("nickname").toString()
+        val type = arguments!!.get("type") as Int
 
         val mUser = FirebaseAuth.getInstance().currentUser
         uid = mUser!!.uid
         roomMessageRef = getRoomMessageRef(roomId)
 
-        populateData()
+        populateData(type)
 
         binding.sendButton.setOnClickListener {
 
             val message = Message(
                 uid = uid,
                 text_message_body = binding.messageText.text.toString(),
-                text_message_name = "TEMP",
-//                timeStamp = System.currentTimeMillis() + 32_400_000) // 시차 9시간 적용
+                text_message_name = nickname,
                 timeStamp = System.currentTimeMillis())
 
 
@@ -92,25 +95,18 @@ class ChatRoomFragment : Fragment() {
         }
     }
 
-    private fun populateData() {
+    private fun populateData(type : Int) {
 
-        // TODO : messageref에서 얻는 거는, 시간 반대순으로 띄워줘야한다.
+        roomMessageRef.orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { messages ->
+            for(message in messages){
 
-        getRoomRef(roomId).get().addOnSuccessListener {room ->
-
-            roomMessageRef.orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { messages ->
-                for(message in messages){
-
-                    if(uid.equals((message.getString("uid")))){
-                        messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
-                    }else{
-                        var nickname : String
-
-                        if(uid.equals(room.get("createUser")))nickname = room.get("enteredUserNickname").toString()
-                        else nickname = room.get("createUserNickname").toString()
-
-                        messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context, nickname))
-                    }
+                val messageId = message.getString("uid")!!
+                if(messageId.equals(uid)){
+                    messageAdapter.add(SendMessageItem(snapshotToMessage(message)))
+                }else if(messageId.equals("alarm")){
+                    messageAdapter.add(AlarmMessageItem(snapshotToMessage(message)))
+                }else{
+                    messageAdapter.add(ReceiveMessageItem(snapshotToMessage(message),this.context))
                 }
             }
         }
