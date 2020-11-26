@@ -6,5 +6,6 @@ data class Room(
     val timeStamp: String,
     val summonerLane : Long,
     val partnerLane : Long,
-    val type : Long
+    val type : Long,
+    val closed : Boolean
 )

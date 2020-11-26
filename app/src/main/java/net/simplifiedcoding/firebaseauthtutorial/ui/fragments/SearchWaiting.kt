@@ -77,7 +77,8 @@ class SearchWaiting : Fragment() {
                             summonerLane = summonerLane,
                             partnerLane = partnerLane,
                             type = 1,
-                            nickname = nickname))
+                            nickname = nickname,
+                            closed = false))
 
                     val message = Message(
                         uid = "alarm",
@@ -113,7 +114,8 @@ class SearchWaiting : Fragment() {
                     summonerLane = summonerLane,
                     partnerLane = partnerLane,
                     type = 0,
-                    nickname = nickname
+                    nickname = nickname,
+                    closed = false
                 ))
 
             val message = Message(

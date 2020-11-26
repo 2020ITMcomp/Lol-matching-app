@@ -64,7 +64,8 @@ class RoomHistory : Fragment() {
                     timeStamp = room.getString("timeStamp")!!,
                     summonerLane = room.getLong("summonerLane")!!,
                     partnerLane = room.getLong("partnerLane")!!,
-                    type = room.getLong("type")!!
+                    type = room.getLong("type")!!,
+                    closed = room.getBoolean("closed")!!
                 )//roomId로 Name을 설정한 것은 임시
                 roomAdapter.add(RoomHolder(roomObj))
             }

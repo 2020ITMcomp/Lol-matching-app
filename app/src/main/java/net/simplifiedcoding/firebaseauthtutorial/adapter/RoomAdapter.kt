@@ -1,5 +1,6 @@
 package net.simplifiedcoding.firebaseauthtutorial.adapter
 
+import android.graphics.Color
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
@@ -23,17 +24,25 @@ class RoomHolder(private val room: Room) : BindableItem<RoomListBinding>() {
     }
 
     override fun bind(viewBinding: RoomListBinding, position: Int) {
-        val roomName = room.timeStamp + " " + laneInterpretation(room.summonerLane) + " : " + laneInterpretation(room.partnerLane) + " 듀오"
 
+        val roomName = room.timeStamp + " " + laneInterpretation(room.summonerLane) + " : " + laneInterpretation(room.partnerLane) + " 듀오"
         viewBinding.roomDescription.text = roomName
-        viewBinding.roomDescription.setOnClickListener {
-            var bundle = bundleOf(
-                "roomId" to room.roomId,
-                "nickname" to room.nickname,
-                "type" to room.type
-            )
-            viewBinding.root.findNavController().navigate(R.id.action_roomHistory_to_chatRoomFragment, bundle)
+
+        if(room.closed){
+            viewBinding.roomDescription.setBackgroundColor(Color.parseColor("#000000"))
+            viewBinding
+        }else{
+            viewBinding.roomDescription.setOnClickListener {
+                var bundle = bundleOf(
+                    "roomId" to room.roomId,
+                    "nickname" to room.nickname,
+                    "type" to room.type
+                )
+                viewBinding.root.findNavController().navigate(R.id.action_roomHistory_to_chatRoomFragment, bundle)
+            }
         }
+
+
     }
 
     fun laneInterpretation(lane : Long) : String{
