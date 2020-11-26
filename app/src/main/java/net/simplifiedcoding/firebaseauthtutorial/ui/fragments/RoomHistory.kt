@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import net.simplifiedcoding.firebaseauthtutorial.R
@@ -55,7 +56,7 @@ class RoomHistory : Fragment() {
     }
 
     private fun setList() {
-        getRoomListRef(uid).get().addOnSuccessListener { rooms ->
+        getRoomListRef(uid).orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { rooms ->
             for(room in rooms){
 
                 val roomObj = Room(
