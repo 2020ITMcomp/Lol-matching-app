@@ -49,7 +49,7 @@ class ChatRoomFragment : Fragment() {
         recyclerView.adapter = messageAdapter
         roomId = arguments!!.getString("roomId")
         nickname = arguments!!.get("nickname").toString()
-        val type = arguments!!.get("type") as Int
+        val type = arguments!!.get("type") as Long
 
         val mUser = FirebaseAuth.getInstance().currentUser
         uid = mUser!!.uid
@@ -116,7 +116,7 @@ class ChatRoomFragment : Fragment() {
         }
     }
 
-    private fun populateData(type : Int) {
+    private fun populateData(type : Long) {
 
         roomMessageRef.orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { messages ->
             for(message in messages){

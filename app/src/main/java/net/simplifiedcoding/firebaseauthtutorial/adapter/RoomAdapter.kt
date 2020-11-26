@@ -29,7 +29,8 @@ class RoomHolder(private val room: Room) : BindableItem<RoomListBinding>() {
         viewBinding.roomDescription.setOnClickListener {
             var bundle = bundleOf(
                 "roomId" to room.roomId,
-                "nickname" to room.nickname
+                "nickname" to room.nickname,
+                "type" to room.type
             )
             viewBinding.root.findNavController().navigate(R.id.action_roomHistory_to_chatRoomFragment, bundle)
         }
