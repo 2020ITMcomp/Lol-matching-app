@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
                 setTitle("로그아웃")
                 setPositiveButton("네") {_, _ ->
                     FirebaseAuth.getInstance().signOut()
-                    Navigation.findNavController(binding.root).navigate(R.id.action_logout)
+
 
                 }
                 setNegativeButton("아니요") {_, _ ->
