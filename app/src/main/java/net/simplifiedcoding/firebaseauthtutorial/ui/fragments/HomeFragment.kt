@@ -12,16 +12,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
+import com.squareup.picasso.Picasso
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.coroutines.Delay
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
 import net.simplifiedcoding.firebaseauthtutorial.utils.addNewRoom
 import net.simplifiedcoding.firebaseauthtutorial.utils.addRoomToUser
+import net.simplifiedcoding.firebaseauthtutorial.utils.getSummonerInfoRef
 import net.simplifiedcoding.firebaseauthtutorial.utils.getUserNicknameRef
 
 
@@ -30,7 +34,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding : FragmentHomeBinding
     private lateinit var db : FirebaseFirestore
     private lateinit var mUser : FirebaseUser
-
+    private lateinit var nickname : String
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,10 +43,10 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         mUser = FirebaseAuth.getInstance().currentUser!!
         db = FirebaseFirestore.getInstance()
-
+        nickname = arguments!!.get("nickname").toString()
         //Log.d(TAG, mUser.displayName) TODO : 일단은 사용자의 닉네임을 입력하도록 해야한다.
 
-
+        InputUserAbstract()
         binding.checkRoomButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
         }
@@ -112,6 +116,42 @@ class HomeFragment : Fragment() {
                 DialogInterface.OnClickListener { dialog, id ->
                     return@OnClickListener
                 }).show()
+    }
+    private fun InputUserAbstract() {
+
+        binding.apply {
+
+            getSummonerInfoRef(nickname).get().addOnSuccessListener { info ->
+
+                Firebase.storage.reference.child("Tier/${info.get("tier").toString()}.png").downloadUrl.addOnSuccessListener { uri ->
+                    Picasso.get().load(uri).into(binding.tiericon)
+                    binding.summonernickname.text = info.get("name").toString()
+                    //binding.level.text = info.get("summonerLevel").toString()
+                    //binding.typeB.text = info.get("B_Feature").toString()
+                    //binding.typeM.text = info.get("M_Feature").toString()
+                    //binding.typeJ.text = info.get("J_Feature").toString()
+                    //binding.typeT.text = info.get("T_Feature").toString()
+                    //binding.typeS.text = info.get("S_Feature").toString()
+
+                    binding.bottomwinrate.text = (info.get("B_Win")as Double).times(100).toString() + "%"
+                    binding.middlewinrate.text = (info.get("M_Win")as Double).times(100).toString() + "%"
+                    binding.junglewinrate.text = (info.get("J_Win")as Double).times(100).toString() + "%"
+                    binding.topwinrate.text = (info.get("T_Win")as Double).times(100).toString() + "%"
+                    binding.supportwinrate.text = (info.get("S_Win")as Double).times(100).toString() + "%"
+                    //binding.winrateTotal.text = (info.get("Total_Win")as Double).times(100).toString() + "%"
+
+                    binding.bottomkda.text = info.get("B_KDA").toString()
+                    binding.middlekda.text = info.get("M_KDA").toString()
+                    binding.junglekda.text = info.get("J_KDA").toString()
+                    binding.topkda.text = info.get("T_KDA").toString()
+                    binding.supportkda.text = info.get("S_KDA").toString()
+                }
+
+
+            }
+
+        }
+
     }
 
     companion object{
