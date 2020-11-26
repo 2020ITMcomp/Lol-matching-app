@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="lane">
-        <item>Top</item>
-        <item>Jungle</item>
-        <item>Mid</item>
-        <item>Bottom</item>
+        <item>탑</item>
+        <item>정글</item>
+        <item>미드</item>
+        <item>원딜</item>
+        <item>서포터</item>
     </string-array>
 </resources>
