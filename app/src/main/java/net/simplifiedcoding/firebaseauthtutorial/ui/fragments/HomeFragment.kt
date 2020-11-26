@@ -45,15 +45,13 @@ class HomeFragment : Fragment() {
         db = FirebaseFirestore.getInstance()
         getUserNicknameRef(mUser.uid).addOnSuccessListener {info ->
             nickname = info.get("nickname").toString()
-            // 임시
-            nickname = "Hide on bush"
             InputUserAbstract()
         }
         //Log.d(TAG, mUser.displayName) TODO : 일단은 사용자의 닉네임을 입력하도록 해야한다.
 
 
         binding.checkRoomButton.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory, bundleOf( "nickname" to nickname))
         }
         binding.searchRoomButton.setOnClickListener {
             dialogBuilder()
