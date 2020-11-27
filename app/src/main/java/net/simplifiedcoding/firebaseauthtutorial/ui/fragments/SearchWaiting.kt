@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_search_waiting.view.*
+import kotlinx.android.synthetic.main.hojin_1.*
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Message
 import net.simplifiedcoding.firebaseauthtutorial.adapter.Room
@@ -74,7 +75,10 @@ class SearchWaiting : Fragment() {
                             roomId =  room.id,
                             timeStamp =  SimpleDateFormat("MM월 dd일, HH:mm").format(System.currentTimeMillis()),
                             summonerLane = summonerLane,
-                            partnerLane = partnerLane))
+                            partnerLane = partnerLane,
+                            type = 1,
+                            nickname = nickname,
+                            closed = false))
 
                     val message = Message(
                         uid = "alarm",
@@ -108,7 +112,10 @@ class SearchWaiting : Fragment() {
                     roomId =  roomId,
                     timeStamp =  SimpleDateFormat("MM월 dd일, HH:mm").format(System.currentTimeMillis()),
                     summonerLane = summonerLane,
-                    partnerLane = partnerLane
+                    partnerLane = partnerLane,
+                    type = 0,
+                    nickname = nickname,
+                    closed = false
                 ))
 
             val message = Message(

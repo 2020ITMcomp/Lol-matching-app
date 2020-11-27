@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
 
 
         binding.checkRoomButton.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory)
+            Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_roomHistory, bundleOf( "nickname" to nickname))
         }
         binding.searchRoomButton.setOnClickListener {
             dialogBuilder()

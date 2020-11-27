@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import net.simplifiedcoding.firebaseauthtutorial.R
@@ -30,6 +31,7 @@ class RoomHistory : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private val roomAdapter = GroupAdapter<GroupieViewHolder>()
     private lateinit var uid : String
+    private lateinit var nickname : String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,6 +42,7 @@ class RoomHistory : Fragment() {
         db = FirebaseFirestore.getInstance()
         mUser = FirebaseAuth.getInstance().currentUser!!
         uid = mUser.uid
+        nickname = arguments!!.getString("nickname")
 
         recyclerView = binding.roomList.apply {
             setHasFixedSize(true)
@@ -53,14 +56,17 @@ class RoomHistory : Fragment() {
     }
 
     private fun setList() {
-        getRoomListRef(uid).get().addOnSuccessListener { rooms ->
+        getRoomListRef(uid).orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { rooms ->
             for(room in rooms){
 
                 val roomObj = Room(
+                    nickname = nickname,
                     roomId = room.getString("roomId")!!,
                     timeStamp = room.getString("timeStamp")!!,
                     summonerLane = room.getLong("summonerLane")!!,
-                    partnerLane = room.getLong("partnerLane")!!
+                    partnerLane = room.getLong("partnerLane")!!,
+                    type = room.getLong("type")!!,
+                    closed = room.getBoolean("closed")!!
                 )//roomId로 Name을 설정한 것은 임시
                 roomAdapter.add(RoomHolder(roomObj))
             }

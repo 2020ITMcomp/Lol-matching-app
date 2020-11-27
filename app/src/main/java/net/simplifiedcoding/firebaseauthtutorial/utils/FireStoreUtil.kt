@@ -100,6 +100,10 @@ fun userRenewalHistory(uid : String){
 //----------------------------------------------------------------------------------------
 
 fun deleteRoomFromUser(uid : String, roomId : String){
-    db.collection("users").document(uid).collection("enteredRoom").document(roomId).delete()
+    db.collection("users").document(uid).collection("enteredRoom").whereEqualTo("roomId", roomId).get().addOnSuccessListener {room ->
+        for( roomT in room) {
+            roomT.reference.update("closed", true)
+        }
+    }
 }
 
