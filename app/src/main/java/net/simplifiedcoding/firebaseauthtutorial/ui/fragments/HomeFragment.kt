@@ -2,8 +2,9 @@ package net.simplifiedcoding.firebaseauthtutorial.ui.fragments
 
 
 import android.app.AlertDialog
+import android.app.Dialog
+import android.content.Context
 import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,18 +16,11 @@ import androidx.navigation.Navigation
 import com.squareup.picasso.Picasso
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
-import kotlinx.coroutines.Delay
 import net.simplifiedcoding.firebaseauthtutorial.R
 import net.simplifiedcoding.firebaseauthtutorial.databinding.FragmentHomeBinding
-import net.simplifiedcoding.firebaseauthtutorial.ui.HomeActivity
-import net.simplifiedcoding.firebaseauthtutorial.utils.addNewRoom
-import net.simplifiedcoding.firebaseauthtutorial.utils.addRoomToUser
 import net.simplifiedcoding.firebaseauthtutorial.utils.getSummonerInfoRef
 import net.simplifiedcoding.firebaseauthtutorial.utils.getUserNicknameRef
 
@@ -37,6 +31,7 @@ class HomeFragment : Fragment() {
     private lateinit var db : FirebaseFirestore
     private lateinit var mUser : FirebaseUser
     private lateinit var nickname : String
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -66,8 +61,12 @@ class HomeFragment : Fragment() {
                     "nickname" to binding.summonerNickname.text
                 ))
         }
+        binding.textwinrate.setOnClickListener { view ->
+            winDialog(context).show()
 
 
+
+        }
 
         return binding.root
     }
@@ -149,6 +148,10 @@ class HomeFragment : Fragment() {
 
     }
 
+
+
+
+
     companion object{
 
         private const val TAG = "HomeFragment Test"
@@ -156,8 +159,11 @@ class HomeFragment : Fragment() {
         private var partnerLane : Int = -1
 
     }
-
-
-
-
 }
+class winDialog(context: Context?) : Dialog(context) {
+    init {
+        setCanceledOnTouchOutside(true)
+        setContentView(R.layout.feature_winrate)
+    }
+}
+

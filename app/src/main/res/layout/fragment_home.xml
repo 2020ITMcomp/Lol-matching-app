@@ -305,11 +305,14 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="30dp">
             <TextView
+                    android:id="@+id/textwinrate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="hello"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="20dp"/>
+                    android:text="라인 성향별 승률 알아보기"
+
+                    android:textSize="20dp"
+                    android:clickable="true"
+                    android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout

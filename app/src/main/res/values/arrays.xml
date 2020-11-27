@@ -7,4 +7,18 @@
         <item>원딜</item>
         <item>서포터</item>
     </string-array>
+
+    <string-array name="position_winrate">
+        <item>탑:공격적</item>
+        <item>탑:수비적</item>
+        <item>정글:공격적</item>
+        <item>정글:수비적</item>
+        <item>미드:공격적</item>
+        <item>미드:수비적</item>
+        <item>원딜:공격적</item>
+        <item>원딜:수비적</item>
+        <item>서폿:공격적</item>
+        <item>서폿:수비적</item>
+    </string-array>
 </resources>
+
