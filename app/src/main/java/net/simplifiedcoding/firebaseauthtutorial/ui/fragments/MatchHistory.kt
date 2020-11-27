@@ -164,8 +164,9 @@ class MatchHistory : Fragment() {
 
                 Firebase.storage.reference.child("Tier/${info.get("tier").toString()}.png").downloadUrl.addOnSuccessListener { uri ->
                     Picasso.get().load(uri).into(binding.profileicon)
+                    binding.userTier.text = info.get("tier").toString()
                     binding.name.text = info.get("name").toString()
-                    binding.level.text = info.get("summonerLevel").toString()
+                    binding.level.text = ("Level : " + info.get("summonerLevel").toString())
                     binding.typeB.text = info.get("B_Feature").toString()
                     binding.typeM.text = info.get("M_Feature").toString()
                     binding.typeJ.text = info.get("J_Feature").toString()
@@ -177,14 +178,14 @@ class MatchHistory : Fragment() {
                     binding.winrateJ.text = (info.get("J_Win")as Double).times(100).toString() + "%"
                     binding.winrateT.text = (info.get("T_Win")as Double).times(100).toString() + "%"
                     binding.winrateS.text = (info.get("S_Win")as Double).times(100).toString() + "%"
-                    binding.winrateTotal.text = (info.get("Total_Win")as Double).times(100).toString() + "%"
+                    binding.winrateTotal.text = "승률 : "  + ((info.get("Total_Win")as Double).times(100).toString() + "%")
 
                     binding.KDAB.text = info.get("B_KDA").toString()
                     binding.KDAM.text = info.get("M_KDA").toString()
                     binding.KDAJ.text = info.get("J_KDA").toString()
                     binding.KDAT.text = info.get("T_KDA").toString()
                     binding.KDAS.text = info.get("S_KDA").toString()
-                    binding.KDATotal.text = info.get("Total_KDA").toString()
+                    binding.KDATotal.text = ("KDA : " + info.get("Total_KDA").toString())
                 }
 
 

@@ -23,17 +23,37 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-        <ImageView
-                android:id="@+id/profileicon"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight='1'
-                android:layout_marginLeft="30dp" />
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="right">
+
+            <ImageView
+                    android:id="@+id/profileicon"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight='1'
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    tools:background="@drawable/bottom"/>
+
+            <TextView
+                    android:id="@+id/userTier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    tools:text="Challenger" />
+
+        </LinearLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/nameAndRate"
-                android:layout_width="136dp"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="4"
@@ -46,9 +66,10 @@
                     android:layout_marginTop="30dp"
                     android:layout_weight='2'
                     android:gravity="center_vertical"
-                    android:text="하계동 맘스터치"
+                    tools:text="하계동 맘스터치"
                     android:textAlignment="center"
                     android:textSize="18sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -57,48 +78,51 @@
             <TextView
                     android:id="@+id/level"
                     android:layout_width="match_parent"
-                    android:layout_height="25dp"
+                    android:layout_height="17dp"
                     android:layout_marginTop="9dp"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="Level : 344"
-                    android:textAlignment="center"
+                    android:paddingLeft="40dp"
+                    android:gravity="left"
+                    tools:text="Level : 344"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/name" />
 
             <TextView
                     android:id="@+id/winrateTotal"
-                    android:layout_width="66dp"
-                    android:layout_height="26dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="54.4%"
-                    android:textAlignment="center"
+                    android:paddingLeft="40dp"
+                    android:gravity="left"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/level" />
+                    app:layout_constraintTop_toBottomOf="@+id/level"
+                    tools:text="54.4%"
+                    android:textColor="@color/blue"/>
 
             <TextView
                     android:id="@+id/KDA_Total"
-                    android:layout_width="66dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="26dp"
-                    android:layout_marginStart="70dp"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="35dp"
                     android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="KDA : 3.14"
-                    android:textAlignment="center"
+                    android:gravity="left"
+                    android:paddingLeft="40dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/level" />
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/level"
+                    tools:text="KDA : 3.14"
+                    android:textColor="@color/red"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="3dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
@@ -113,22 +137,22 @@
                 <ImageView
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_phone" />
+                        android:background="@drawable/top" />
 
                 <TextView
                         android:id="@+id/typeT"
                         style="@style/typeLayout"
-                        android:text="공격적" />
+                        tools:text="공격적" />
 
                 <TextView
                         android:id="@+id/winrateT"
                         style="@style/winrateLayout"
-                        android:text=' / 승률' />
+                        tools:text=' / 승률' />
 
                 <TextView
                         android:id="@+id/KDA_T"
                         style="@style/kdaLayout"
-                        android:text='10%' />
+                        tools:text='10%' />
             </LinearLayout>
 
             <LinearLayout
@@ -141,22 +165,22 @@
                 <ImageView
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_phone" />
+                        android:background="@drawable/middle" />
 
                 <TextView
                         android:id="@+id/typeM"
                         style="@style/typeLayout"
-                        android:text="Offensive" />
+                        tools:text="Offensive" />
 
                 <TextView
                         android:id="@+id/winrateM"
                         style="@style/winrateLayout"
-                        android:text=' / 승률' />
+                        tools:text=' / 승률' />
 
                 <TextView
                         android:id="@+id/KDA_M"
                         style="@style/kdaLayout"
-                        android:text='10%' />
+                        tools:text='10%' />
             </LinearLayout>
 
             <LinearLayout
@@ -169,22 +193,22 @@
                 <ImageView
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_phone" />
+                        android:background="@drawable/jungle" />
 
                 <TextView
                         android:id="@+id/typeJ"
                         style="@style/typeLayout"
-                        android:text="공격적" />
+                        tools:text="공격적" />
 
                 <TextView
                         android:id="@+id/winrateJ"
                         style="@style/winrateLayout"
-                        android:text=' / 승률' />
+                        tools:text=' / 승률' />
 
                 <TextView
                         android:id="@+id/KDAJ"
                         style="@style/kdaLayout"
-                        android:text='10%' />
+                        tools:text='10%' />
             </LinearLayout>
 
             <LinearLayout
@@ -197,22 +221,22 @@
                 <ImageView
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_phone" />
+                        android:background="@drawable/bottom" />
 
                 <TextView
                         android:id="@+id/typeB"
                         style="@style/typeLayout"
-                        android:text="공격적" />
+                        tools:text="공격적" />
 
                 <TextView
                         android:id="@+id/winrateB"
                         style="@style/winrateLayout"
-                        android:text=' / 승률' />
+                        tools:text=' / 승률' />
 
                 <TextView
                         android:id="@+id/KDAB"
                         style="@style/kdaLayout"
-                        android:text='10%' />
+                        tools:text='10%' />
             </LinearLayout>
 
             <LinearLayout
@@ -225,22 +249,22 @@
                 <ImageView
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_phone" />
+                        android:background="@drawable/support" />
 
                 <TextView
                         android:id="@+id/typeS"
                         style="@style/typeLayout"
-                        android:text="공격적" />
+                        tools:text="공격적" />
 
                 <TextView
                         android:id="@+id/winrateS"
                         style="@style/winrateLayout"
-                        android:text=' / 승률' />
+                        tools:text=' / 승률' />
 
                 <TextView
                         android:id="@+id/KDA_S"
                         style="@style/kdaLayout"
-                        android:text='10%' />
+                        tools:text='10%' />
             </LinearLayout>
 
 
@@ -261,6 +285,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:background="#379392"
+                android:layout_margin="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -269,23 +295,22 @@
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:paddingLeft="50dp"
                     android:text='최근경기'
                     android:textAlignment="center"
+                    android:textColor="#ffffff"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                     android:id="@+id/renewalButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginRight="4dp"
-                    android:text="갱신"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    android:background="#f9c00c"
+                    android:text="Reload"
+                    android:textSize="10dp" />
 
         </LinearLayout>
 
