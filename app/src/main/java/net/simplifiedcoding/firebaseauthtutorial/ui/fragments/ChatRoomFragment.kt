@@ -124,8 +124,12 @@ class ChatRoomFragment : Fragment() {
 
     private fun populateData(type : Long) {
 
-        roomMessageRef.orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { messages ->
+//        roomMessageRef.orderBy("timeStamp", Query.Direction.DESCENDING).get().addOnSuccessListener { messages ->
+        roomMessageRef.orderBy("timeStamp", Query.Direction.ASCENDING).get().addOnSuccessListener { messages ->
             for(message in messages){
+
+                Log.d("타임스템프 테스트", message.get("timeStamp").toString())
+
 
                 val messageId = message.getString("uid")!!
                 if(messageId.equals(uid)){
