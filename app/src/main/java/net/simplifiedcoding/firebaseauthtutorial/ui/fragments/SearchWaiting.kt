@@ -49,8 +49,8 @@ class SearchWaiting : Fragment() {
         val image:ImageView = binding.root.waiting
         Glide.with(this).asGif().load(R.raw.image).into(image)
 
-        val summonerLane = arguments!!.getLong("summonerLane")
-        val partnerLane = arguments!!.getLong("partnerLane")
+        val summonerLane = arguments!!.getInt("summonerLane").toLong()
+        val partnerLane = arguments!!.getInt("partnerLane").toLong()
         nickname = arguments!!.getString("nickname").toString()
 
         canMatch(summonerLane, partnerLane)
